@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm</title>
+</head>
+<body>
+Điểm Lý &nbsp; <input type="text" id="ly">
+<br> <br>
+Điểm Hóa &nbsp; <input type="text" id="hoa">
+<br> <br>
+Điểm Sinh &nbsp; <input type="text" id="sinh">
+<br><br>
+<input type="button" value="Submit" onclick="submit()">
+<p id="diem-trung-binh"></p>
+<p id="tong_diem"></p>
+
+<script>
+        function submit(){
+            let a = parseInt( document.getElementById("ly").value);
+            let b = parseInt( document.getElementById("hoa").value);
+            let c = parseInt( document.getElementById("sinh").value);
+            document.getElementById("diem-trung-binh").innerHTML = (a + b + c)/3 ;
+            document.getElementById("tong_diem").innerHTML = (a + b + c);
+        }
+</script>
+</body>
+</html>

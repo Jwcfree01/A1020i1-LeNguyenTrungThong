@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinhTien</title>
+    <style>
+        .label1{
+            margin-right: 180px;
+        }
+        .label2{
+            margin-right: 60px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="" class="label1">Amount</label>
+        <label for="" class="label2">From currency</label>
+        <label for="">To currency</label>
+        <br><br>
+        <input type="text" id="nhap" style="margin-right: 60px">
+        <select name="" id="chuyen1" style="width: 100px">
+            <option value="VND">VND</option>
+            <option value="USD">USA</option>
+        </select>
+        <select name="" id="chuyen2" style="width: 100px; margin-left: 50px">
+            <option value="VND">VND</option>
+            <option value="USD">USA</option>
+        </select>
+
+        <button type="button" onclick="tinh()" style="margin-left: 30px">Convert</button>
+    </form>
+    <p id="KQ"></p>
+    <script>
+
+        function tinh() {
+            let e = document.getElementById("nhap").value;
+            let chuyen1 = document.getElementById("chuyen1").value;
+            let chuyen2 = document.getElementById("chuyen2").value;
+            let c=0;
+            if (chuyen1 === "VND" && chuyen2 === "USD") {
+                c =e*23000;
+            } else if (chuyen1 === "USD" && chuyen2 === "VND") {
+                c =e/23000;
+            }else {
+                c=e
+            }
+            document.getElementById("KQ").innerHTML = 'Result: ' + c;
+        }
+    </script>
+</body>
+</html>

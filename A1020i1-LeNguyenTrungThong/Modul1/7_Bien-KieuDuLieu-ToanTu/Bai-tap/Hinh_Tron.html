@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<input type="text" placeholder="nhập bán kính" id="bankinh">
+<button onclick="tinhs()">Tính diện tích</button>
+<button onclick="tinhc()">Tính chu vi</button>
+<p id="dientich"></p>
+<p id="chuvi"></p>
+<script>
+
+    function tinhs() {
+        let a  = parseInt( document.getElementById("bankinh").value);
+    document.getElementById("dientich").innerHTML = 3.14*(a*a);
+    }
+    function tinhc() {
+        let a  = parseInt( document.getElementById("bankinh").value);
+        document.getElementById("chuvi").innerHTML = 3.14*a*2;
+    }
+</script>
+
+</body>
+</html>
