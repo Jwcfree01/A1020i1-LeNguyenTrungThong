@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+Nhập a &nbsp; <input type="text" id="soa">
+Nhập b &nbsp; <input type="text" id="sob">
+<br><br>
+<button onclick="tinh('+')">Cộng</button>
+<button onclick="tinh('-')">Trừ</button>
+<button onclick="tinh('*')">Nhân</button>
+<button onclick="tinh('/')">Chia</button>
+<p id="KQ"></p>
+
+<script>
+    function tinh(option) {
+    let a = parseInt(document.getElementById("soa").value);
+    let b = parseInt(document.getElementById("sob").value);
+    let kq = 0;
+    switch (option) {
+        case "+" :
+            kq = a+b;
+            break;
+        case "-" :
+            kq = a-b;
+            break;
+        case "*" :
+            kq = a*b;
+            break;
+        case "/" :
+            kq = a/b;
+            break;
+    }
+    document.getElementById("KQ").innerHTML = kq;
+    }
+</script>
+</body>
+</html>

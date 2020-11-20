@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+    <style>
+        table{
+            width: 500px;
+            height: 180px;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+        }
+        .doimau{
+            background-color: chocolate;
+            width: 100%;
+        }
+        .doimau:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" style="width: 490px" id="result">
+        <table border="1px">
+            <tr>
+                <td><input type="button" class="doimau" value="Rad"></td>
+                <td><input type="button" value="A"></td>
+                <td><input type="button" class="doimau" value="X!"></td>
+                <td><input type="button" class="doimau" value="(" onclick="number('(')"></td>
+                <td><input type="button" class="doimau" value=")" onclick="number(')')"></td>
+                <td><input type="button" class="doimau" value="%"></td>
+                <td><input type="reset" class="doimau" value="AC"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="doimau" value="lnv"></td>
+                <td><input type="button" class="doimau" value="Sin"></td>
+                <td><input type="button" class="doimau" value="ln"></td>
+                <td><input type="button" value="7" onclick="number('7')"></td>
+                <td><input type="button" value="8" onclick="number('8')"></td>
+                <td><input type="button" value="9" onclick="number('9')"></td>
+                <td><input type="button" class="doimau" value="/" onclick="number('/')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="doimau" value="pi"></td>
+                <td><input type="button" class="doimau" value="Cos"></td>
+                <td><input type="button" class="doimau" value="log"></td>
+                <td><input type="button" value="4" onclick="number('4')"></td>
+                <td><input type="button" value="5" onclick="number('5')"></td>
+                <td><input type="button" value="6" onclick="number('6')"></td>
+                <td><input type="button" class="doimau" value="X" onclick="number('X')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="doimau" value="0"></td>
+                <td><input type="button" class="doimau" value="Tan"></td>
+                <td><input type="button" class="doimau" value="v"></td>
+                <td><input type="button" value="1" onclick="number('1')"></td>
+                <td><input type="button" value="2" onclick="number('2')"></td>
+                <td><input type="button" value="3" onclick="number('3')"></td>
+                <td><input type="button" class="doimau" value="-" onclick="number('-')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="doimau" value="Ans"></td>
+                <td><input type="button" class="doimau" value="EXP"></td>
+                <td><input type="button" class="doimau" value="x"></td>
+                <td><input type="button" value="0" onclick="number('0')"></td>
+                <td><input type="button" value="." onclick="number('.')"></td>
+                <td><input type="button" value="=" style="background-color: blue"></td>
+                <td><input type="button" class="doimau" value="+" onclick="number('+')"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function number(num) {
+            document.getElementById('result').value += num;
+            // let a = document.getElementById('result').value += num;
+            // a.value = a.value + num;
+        }
+    </script>
+</body>
+</html>
