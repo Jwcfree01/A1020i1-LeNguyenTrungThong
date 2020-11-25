@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển nobita</title>
+</head>
+<body onload="docReady()">
+<img  id="ball" src="./img/d53fb08a23315b104193fa8a7c98f0dc.png" alt="" style="position: absolute; left: 1px; top: 1px">
+
+<script>
+    function xuong() {
+        let a = document.getElementById('ball');
+        a.style.top = parseInt(a.style.top) + 10 + "px";
+    }
+    function len() {
+        let a = document.getElementById('ball');
+        a.style.top = parseInt(a.style.top) - 10 + "px";
+    }
+    function phai() {
+        let a = document.getElementById('ball');
+        a.style.left = parseInt(a.style.left) + 10 + "px";
+    }
+    function trai() {
+        let a = document.getElementById('ball');
+        a.style.left = parseInt(a.style.left) - 10 + "px";
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                trai();
+                break;
+            case 39:
+                phai();
+                break;
+            case 38:
+                len();
+                break;
+            case 40:
+                xuong();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+
+</script>
+</body>
+</html>

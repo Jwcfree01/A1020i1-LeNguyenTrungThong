@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+    <!--    bài 1: kiểm tra a có chia hết cho b??-->
+<!--    <input type="text" id="soa" placeholder="nhập a">-->
+<!--    <input type="text" id="sob" placeholder="nhập b">-->
+<!--    <button onclick="tinh()">Tinh</button>-->
+<!--<p id="KQ"></p>-->
+
+<!--    <script>-->
+<!--        function tinh() {-->
+<!--            let b = parseInt(document.getElementById('sob').value);-->
+<!--            let a = parseInt(document.getElementById('soa').value);-->
+<!--            if (a % b ==0){-->
+<!--                document.getElementById('KQ').innerHTML= a + " chia hết cho " + b;-->
+<!--            } else {-->
+<!--                document.getElementById('KQ').innerHTML= a + " không chia hết cho " + b;-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+    <!--    bài 2: nhập tuổi và in ra kết quá nếu <16 thì không được vào lớp 10 -->
+<!--    <input type="text" placeholder="nhập tuổi" id="age">-->
+<!--    <button onclick="tinhtuoi()">Tinh tuoi</button>-->
+<!--    <p id="tuoi"></p>-->
+
+<!--    <script>-->
+<!--        function tinhtuoi() {-->
+<!--            let c = document.getElementById('age').value;-->
+<!--            let d = (c<16) ? 'chưa đủ tuổi' : 'đủ tuổi';-->
+<!--            document.getElementById('tuoi').innerHTML = d;-->
+<!--        }-->
+<!--    </script>-->
+
+    <!--bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình số đó là lớn hay nhỏ hơn 0-->
+
+<!--    <input type="text" placeholder="nhập số" id="so">-->
+<!--    <button onclick="tinhso()">Tính số</button>-->
+<!--    <p id="htso"></p>-->
+
+<!--    <script>-->
+<!--        function tinhso() {-->
+<!--            let c = document.getElementById('so').value;-->
+<!--            let d = (c<0) ? '<0' : '>0';-->
+<!--            document.getElementById('htso').innerHTML = d;-->
+<!--        }-->
+<!--    </script>-->
+
+<!--    Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+
+<!--    <input type="text" id="so1" placeholder="nhập số thứ 1">-->
+<!--    <input type="text" id="so2" placeholder="nhập số thứ 2">-->
+<!--    <input type="text" id="so3" placeholder="nhập số thứ 3">-->
+<!--    <p id="solannhat"></p>-->
+<!--    <button onclick="tinh()">Tinh</button>-->
+
+<!--    <script>-->
+<!--        function tinh() {-->
+<!--            let f = document.getElementById('so1').value;-->
+<!--            let g = document.getElementById('so2').value;-->
+<!--            let h = document.getElementById('so3').value;-->
+<!--            if (f>g && f>h){-->
+<!--                document.getElementById('solannhat').innerHTML = f + " là số lớn nhất";-->
+<!--            } else if (g>f && g>h){-->
+<!--                document.getElementById('solannhat').innerHTML = g + " là số lớn nhất";-->
+<!--            } else {-->
+<!--                document.getElementById('solannhat').innerHTML = h + " là số lớn nhất";-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!--    Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+
+<!--    <table border="1px">-->
+<!--        <tr>-->
+<!--            <th rowspan="2">Môn học</th>-->
+<!--            <th colspan="2">Điểm kiểm tra</th>-->
+<!--            <th rowspan="2">Điểm thi giữa kì</th>-->
+<!--            <th rowspan="2">Điểm thi cuối kì</th>-->
+<!--            <th rowspan="2">Tông điểm</th>-->
+<!--            <th rowspan="2"><button onclick="kqtong()">Kết quả</button></th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>15 phút</th>-->
+<!--            <th>45 phút</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>Toán</th>-->
+<!--            <td><input id="toan15" type="text"></td>-->
+<!--            <td><input id="toan45" type="text"></td>-->
+<!--            <td><input type="text" id="toangk"></td>-->
+<!--            <td><input type="text" id="toanck"></td>-->
+<!--            <td><p id="tongtoan"></p></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>Lí</th>-->
+<!--            <td><input id="li15" type="text"></td>-->
+<!--            <td><input id="li45" type="text"></td>-->
+<!--            <td><input type="text" id="ligk"></td>-->
+<!--            <td><input type="text" id="lick"></td>-->
+<!--            <td><p id="tongli"></p></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>Hóa</th>-->
+<!--            <td><input id="hoa15" type="text"></td>-->
+<!--            <td><input id="hoa45" type="text"></td>-->
+<!--            <td><input type="text" id="hoagk"></td>-->
+<!--            <td><input type="text" id="hoack"></td>-->
+<!--            <td><p id="tonghoa"></p></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>Anh</th>-->
+<!--            <td><input id="anh15" type="text"></td>-->
+<!--            <td><input id="anh45" type="text"></td>-->
+<!--            <td><input type="text" id="anhgk"></td>-->
+<!--            <td><input type="text" id="anhck"></td>-->
+<!--            <td><p id="tonganh"></p></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>Văn</th>-->
+<!--            <td><input id="van15" type="text"></td>-->
+<!--            <td><input id="van45" type="text"></td>-->
+<!--            <td><input type="text" id="vangk"></td>-->
+<!--            <td><input type="text" id="vanck"></td>-->
+<!--            <td><p id="tongvan"></p></td>-->
+<!--            <th><p id="kq"></p></th>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <h1>Công thức tính điểm: 15 phút + (45 phút*2) + (Giữa kì*3) + (cuối kì*3) / tổng số các môn</h1>-->
+
+<!--    <script>-->
+<!--        function kqtong() {-->
+<!--            let a = parseInt(document.getElementById('toan15').value);-->
+<!--            let b = parseInt(document.getElementById('toan45').value);-->
+<!--            let c = parseInt(document.getElementById('toangk').value);-->
+<!--            let d = parseInt(document.getElementById('toanck').value);-->
+<!--            tongtoana = document.getElementById('tongtoan').innerHTML = parseInt(a+(b*2)+(c*3)+(d*3));-->
+
+
+<!--            let e = parseInt(document.getElementById('li15').value);-->
+<!--            let f = parseInt(document.getElementById('li45').value);-->
+<!--            let g = parseInt(document.getElementById('ligk').value);-->
+<!--            let h = parseInt(document.getElementById('lick').value);-->
+<!--            tonglia = document.getElementById('tongli').innerHTML = e+(f*2)+(g*3)+(h*3);-->
+
+<!--            let i = parseInt(document.getElementById('hoa15').value);-->
+<!--            let k = parseInt(document.getElementById('hoa45').value);-->
+<!--            let l = parseInt(document.getElementById('hoagk').value);-->
+<!--            let m = parseInt(document.getElementById('hoack').value);-->
+<!--            tonghoaa = document.getElementById('tonghoa').innerHTML = i+(k*2)+(l*3)+(m*3);-->
+
+<!--            let aa = parseInt(document.getElementById('anh15').value);-->
+<!--            let bb = parseInt(document.getElementById('anh45').value);-->
+<!--            let cc = parseInt(document.getElementById('anhgk').value);-->
+<!--            let dd = parseInt(document.getElementById('anhck').value);-->
+<!--            tonganha = document.getElementById('tonganh').innerHTML = aa+(bb*2)+(cc*3)+(dd*3);-->
+
+<!--            let aaa = parseInt(document.getElementById('van15').value);-->
+<!--            let bbb = parseInt(document.getElementById('van45').value);-->
+<!--            let ccc = parseInt(document.getElementById('vangk').value);-->
+<!--            let ddd = parseInt(document.getElementById('vanck').value);-->
+<!--            tongvana = document.getElementById('tongvan').innerHTML = aaa+(bbb*2)+(ccc*3)+(ddd*3);-->
+
+<!--            hs = document.getElementById('kq').innerHTML = (tonganha+tonghoaa+tonglia+tongvana+tongtoana)/5;-->
+<!--            alert(typeof (hs));-->
+<!--            if (hs<=30){-->
+<!--                alert("học lại");-->
+<!--            } else if (hs<50){-->
+<!--                alert("học sinh yêu");-->
+<!--            } else if (hs<80){-->
+<!--                alert("học sinh khá");-->
+<!--            } else {-->
+<!--                alert("học sinh giỏi");-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--    Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng-->
+
+<!--    <input type="text" id="doanhso" placeholder="nhập doanh số bán hàng trong tháng">-->
+<!--    <button onclick="tinh()">Tính</button>-->
+
+<!--    <script>-->
+<!--        function tinh() {-->
+<!--            let a = document.getElementById('doanhso').value;-->
+<!--            switch (a) {-->
+<!--                case '10000000':-->
+<!--                    alert('bạn nhận được 10% hoa hồng là: 1000000');-->
+<!--                    break;-->
+<!--                case '20000000':-->
+<!--                    alert('bạn nhận được 10% hoa hồng là 2000000');-->
+<!--                    break;-->
+<!--                default:-->
+<!--                    alert('bạn nhận được mức hoa hồng cao nhất là 30000000')-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!--    Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho-->
+
+<!--    <h3>(Tính theo quy định 10 giây đầu tiên tính cước 100đ/s, từ giây 11 trở đi tính cước 26,67đ/s).</h3>-->
+<!--    <input type="text" id="tgian" placeholder="nhập thời gian cuộc gọi">-->
+<!--    <button onclick="tinh()">Tính tiền</button>-->
+
+<!--    <script>-->
+<!--        function tinh() {-->
+<!--            let a = parseInt(document.getElementById('tgian').value);-->
+<!--            if (a<10){-->
+<!--                alert('số tiền bạn phải trả là: ' + a*100);-->
+<!--            } else {-->
+<!--                alert('số tiền bạn phải trả là: ' + a*26.67);-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+</body>
+</html>

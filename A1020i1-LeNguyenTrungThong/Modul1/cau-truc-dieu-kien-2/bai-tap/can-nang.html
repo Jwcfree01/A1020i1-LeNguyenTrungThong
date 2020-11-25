@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cân nặng</title>
+</head>
+<body>
+<input type="text" id="cao" placeholder="nhập vào chiều cao">
+<input type="text" id="nang" placeholder="nhập vào cân nặng">
+<button onclick="kg()">Tính</button>
+<p id="hienthi"></p>
+
+<script>
+    function kg() {
+        let a = parseInt(document.getElementById('cao').value);
+        let b = parseInt(document.getElementById('nang').value);
+        let c = b*a/2;
+        alert(typeof (c));
+        if (c<18.5){
+            document.getElementById('hienthi').innerHTML = "UnderWeight";
+        }else if (18.5<=c<25){
+            document.getElementById('hienthi').innerHTML = 'Nomal';
+        }else if (25<=c<30) {
+            document.getElementById('hienthi').innerHTML = 'Overweight';
+        } else {
+            document.getElementById('hienthi').innerHTML = 'Obese';
+        }
+    }
+</script>
+</body>
+</html>

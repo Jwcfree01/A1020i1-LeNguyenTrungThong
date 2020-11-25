@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If else 02</title>
+</head>
+<body>
+<!--Bài 1: Chuyển từ độ C sang độ F. °C  x  9/5 + 32 = °F-->
+
+<!--    <input type="text" id="doC" placeholder="nhập độ c">-->
+<!--    <button onclick="chuyen()">chuyển đổi</button>-->
+<!--    -->
+<!--    <script>-->
+<!--        function chuyen() {-->
+<!--            let a = parseInt(document.getElementById('doC').value);-->
+<!--            alert(a+ 'độ C bằng ' + (a*9/5) +32 + 'độ F');-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 2: Chuyển từ mét sang feet:  ft =m * 3.2808-->
+
+<!--    <input type="text" placeholder="nhập mét" id="m">-->
+<!--    <button onclick="tinh()">Chuyển</button>-->
+<!--    -->
+<!--    <script>-->
+<!--        function tinh() {-->
+<!--            let a = document.getElementById('m').value;-->
+<!--            alert(a + 'mét bằng ' + a*3.2808 + 'feet');-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 3: Tính diện tích hình vuông khi biết cạnh a.-->
+
+<!--    <input type="text" placeholder="nhập cạnh hình vuông" id="hvuong">-->
+<!--    <button onclick="chuyen()">tính</button>-->
+<!--    -->
+<!--    <script>-->
+<!--        function chuyen() {-->
+<!--            let a = document.getElementById('hvuong').value;-->
+<!--            alert('diện tích hình vuông là: ' + a*a);-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.-->
+
+<!--    <input type="text" placeholder="nhập cạnh hình hcn" id="dai">-->
+<!--    <input type="text" placeholder="nhập cạnh hình hcn" id="rong">-->
+<!--    <button onclick="chuyen()">tính</button>-->
+<!--    -->
+<!--    <script>-->
+<!--        function chuyen() {-->
+<!--            let a = document.getElementById('dai').value;-->
+<!--            let b = document.getElementById('rong').value;-->
+<!--            alert('diện tích hcn là: ' + a*b);-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.-->
+
+<!--    <input type="text" placeholder="nhập cạnh a" id="canha">-->
+<!--    <input type="text" placeholder="nhập cạnh b" id="canhb">-->
+<!--    <button onclick="chuyen()">tính</button>-->
+
+<!--    <script>-->
+<!--        function chuyen() {-->
+<!--            let a = document.getElementById('canha').value;-->
+<!--            let b = document.getElementById('canhb').value;-->
+<!--            alert('diện tích hình tam giác vuông là: ' + (a*b)/2);-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 6: Giải phương trình bậc 1.-->
+
+<!--<input type="text" id="nhapa" placeholder="nhập a">-->
+<!--<input type="text" id="nhapb" placeholder="nhập b">-->
+<!--<button id="kq" onclick="tính()">Kết quả</button>-->
+
+<!--<script>-->
+<!--    function tính() {-->
+<!--        let a = parseInt(document.getElementById('nhapa').value);-->
+<!--        let b = parseInt(document.getElementById('nhapb').value);-->
+<!--        (a != 0)? alert('x = ' + -b/a) : alert('vô nghiệm');-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 7: Giải phương trình bậc 2.-->
+
+<!--<input type="text" id="nhapa" placeholder="nhập a">-->
+<!--<input type="text" id="nhapb" placeholder="nhập b">-->
+<!--<input type="text" id="nhapc" placeholder="nhập c">-->
+<!--<button id="kq" onclick="tính()">Kết quả</button>-->
+
+<!--<script>-->
+<!--    function tính() {-->
+<!--        let a = parseInt(document.getElementById('nhapa').value);-->
+<!--        let b = parseInt(document.getElementById('nhapb').value);-->
+<!--        let c = parseInt(document.getElementById('nhapc').value);-->
+<!--        if (a != 0){-->
+<!--            delta = parseInt((b*b) - (4*a*c));-->
+<!--            if (delta>0){-->
+<!--                alert('x1= ' + (-b + (Math.sqrt(delta)))/(2*a));-->
+<!--                alert('x2= ' + (-b - (Math.sqrt(delta)))/(2*a));-->
+<!--            } else if (delta==0){-->
+<!--                alert('phương trình có nghiệm kép: x1=x2= ' + (-b/(2*a)));-->
+<!--            } else {-->
+<!--                alert('phương trình vô nghiệm');-->
+<!--            }-->
+<!--        }else if (a==0){-->
+<!--            if (b==0 && c==0){-->
+<!--                alert('phương trình vô số nghiệm');-->
+<!--            }else {-->
+<!--                alert('phương trình vô nghiệm');-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.-->
+<!--<input type="text" placeholder="nhập tuổi" id="tuoi">-->
+<!--<button onchange="nhaptuoi()">submit</button>-->
+
+<!--<script>-->
+<!--    function nhaptuoi() {-->
+<!--        let a = document.getElementById('tuoi').value;-->
+<!--        -->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác-->
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+
+<!--<input type="text" placeholder="nhập a" id="a">-->
+<!--<input type="text" placeholder="nhập b" id="b">-->
+<!--<input type="text" placeholder="nhập c" id="c">-->
+<!--<button onclick="tinh()">tính</button>-->
+
+<!--<script>-->
+<!--function tinh() {-->
+<!--    let a = parseInt(document.getElementById('a').value);-->
+<!--    let b = parseInt(document.getElementById('b').value);-->
+<!--    let c = parseInt(document.getElementById('c').value);-->
+<!--    let d = parseInt(a+b);-->
+<!--    let e = parseInt(b+c);-->
+<!--    let f = parseInt(a+c);-->
+<!--    if (a > 0 , b > 0, c > 0, d > c, e > a, f > b) {-->
+<!--        alert('a,b,c là cạnh của tam giác');-->
+<!--    } else {-->
+<!--        alert('a,b,c không phải là cạnh của tam giác');-->
+<!--    }-->
+<!--}-->
+<!--</script>-->
+
+<!--Bài 10: Viết chương trình tính giá điện.-->
+
+<!--<input type="text" placeholder="nhập số kWh bạn đã tiêu thụ trong tháng" id="sodien">-->
+<!--<button onclick="tinh()">tính</button>-->
+
+<!--<script>-->
+<!--    function tinh() {-->
+<!--        let a = parseInt(document.getElementById('sodien').value);-->
+<!--        if (0<a<50){-->
+<!--            alert('số tiền bạn phải trả là: ' + (a*1.678));-->
+<!--        }else if (50<a<100){-->
+<!--            alert('số tiền bạn phải trả là: ' + (a*1.734));-->
+<!--        }else if (100<a<200){-->
+<!--            alert('số tiền bạn phải trả là: ' + (a*2.014));-->
+<!--        }else {-->
+<!--            alert('số tiền bạn phải trả là: ' + (a*2.536));-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 11: Viết chương trình tính thuế thu nhập cá nhân.-->
+<!--dưới 5tr, 5%; từ 5tr đến 10tr, 10%; từ 10tr đến 18tr, 15%; trên 18tr, 20%-->
+
+<!--<input type="text" placeholder="nhập số tiền thu nhập chịu thuế" id="tien">(đơn vị triệu đồng)-->
+<!--<button onclick="tinh()">tính tiền thuế</button>-->
+
+<!--<script>-->
+<!--    function tinh() {-->
+<!--        let a = parseInt(document.getElementById('tien').value);-->
+<!--        if (0<a<5){-->
+<!--            alert('số tiền thuế bạn phải trả là: ' + (a*0.05));-->
+<!--        } else if (5<a<10) {-->
+<!--            alert('số tiền thuế bạn phải trả là: ' + (a*0.1));-->
+<!--        }else if (10<a<18) {-->
+<!--            alert('số tiền thuế bạn phải trả là: ' + (a*0.15));-->
+<!--        }else {-->
+<!--            alert('số tiền bnaj phải trả là: ' + (a*0.2));-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu,
+ số tháng cho vay và lãi xuất hàng tháng.-->
+<!--công thức : a = p*(1+(r/n))mũ nt-->
+<input type="text" placeholder="nhập số tiền cần vay" id="nhapa">
+<input type="text" placeholder="nhập số tháng cần vay" id="nhapb">
+
+<button onclick="tinh()">Số tiền phải trả</button>
+
+<script>
+    function tinh() {
+        let p = parseInt(document.getElementById('nhapa').value);
+        let t = parseInt(document.getElementById('nhapb').value);
+        let n = t;
+        alert('số tiền bạn phải trả là: ' + p*Math.pow((1+(0.07/n)),n*t));
+    }
+</script>
+</body>
+</html>
