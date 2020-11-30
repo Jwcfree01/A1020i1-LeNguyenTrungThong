@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+<script>
+    let a =0;
+    let b =1;
+    let c ='';
+    string = a+ ',' + b+',';
+    // gắn string để trước tiên in ra 2 số 0 và 1 trước rồi mới vào vòng lặp in tiếp ra số 1 2 3 5 --> dãy 0 1 1 2 3..
+    for (i=0; i<=20; i++){
+        let c =a+b;
+        string += c +',';
+        a=b;
+        b=c;
+    }
+    console.log(string);
+</script>
+
+
+</body>
+</html>

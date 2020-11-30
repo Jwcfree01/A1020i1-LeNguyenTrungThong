@@ -5,13 +5,65 @@
     <title>Số nguyên tố</title>
 </head>
 <body>
+<!--// in ra 20 số nguyên tố, số nhỏ hơn 2 không phải là số nguyên tố-->
+
+<!--<script>-->
+<!--    let a =2;-->
+<!--    count = 0;-->
+<!--    // let kq='';-->
+<!--    while (count<20){-->
+<!--        let check = true;-->
+<!--        for (i=2; i<a; i++){-->
+<!--            if (a%i===0){-->
+<!--                check=false;-->
+<!--                break;-->
+<!--            }-->
+<!--        }-->
+<!--        if (check===true){-->
+<!--            // kq += a;-->
+<!--            count++;-->
+<!--            console.log(a);-->
+<!--        }-->
+<!--        a++;-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--nhập vào 1 số và kiểm tra đó phải là số nguyên tố không-->
+<!--<script>-->
+<!--    let a = parseInt(prompt('nhập vào 1 số'));-->
+<!--    let check = true;-->
+<!--    for (i=2; i<a; i++ ){-->
+<!--        if (a%i===0){-->
+<!--            check=false;-->
+<!--            console.log(a+'không phải là số nguyên tố');-->
+<!--            break;-->
+<!--        }-->
+<!--    }-->
+<!--    if (check===true){-->
+<!--        console.log(a+ 'là số nguyên tố');-->
+<!--    }-->
+<!--</script>-->
+
+<!--bạn muốn kiểm tra số nguyên tố từ khoảng nào-->
+
 <script>
-    let count = 0;
-    let number =20;
-    let a = 2;
-    while (count <= number){
-        for (a=2; i<)
-            //if else
+    let a = parseInt(prompt('nhập vào khoảng kiểm tra số nguyên tố'));
+    let b = 2;
+    count=0;
+    while (count<a){
+        let check=true;
+        for (i=2; i<b; i++){
+            if (b%i==0){
+                check=false;
+                break;
+            }
+        }
+        if (check==true){
+            console.log(b);
+            count++;
+        }
+        b++;
     }
 </script>
 </body>

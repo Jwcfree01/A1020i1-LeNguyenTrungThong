@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <style>
+        .furama{
+            width: 1000px;
+            height: auto;
+            background-color: pink;
+            margin: 0px auto;
+        }
+
+        .info{
+            width: 1000px;
+            height: auto;
+            background-color: yellow;
+            margin: 0px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center">INFOMATION FORM</h2>
+    <div class="furama">
+    <form action="">
+        <label for="">Name  <input type="text" placeholder="Name" id="name"></label>
+        <label for=""><select name="" id="typeOfCm" style="margin-left: 50px">
+            <option value="">CMND</option>
+            <option value="">Căn cước công dân</option>
+        </select></label>
+        <label for="" ><input type="text" placeholder="Nhập số giấy tờ"></label>
+        <label for="" style="margin-left: 80px">Date Of Birth  <input type="date" placeholder="Date Of Birth"></label>
+        <br><br><br>
+        <label for="">Address  <input type="text" style="width: 400px" placeholder="Input Address"></label>
+        <label for="" style="margin-left: 80px">Email  <input type="email" placeholder="Input email"></label>
+        <br><br><br>
+        <label for="">Customer type  <select name="">
+            <option value="">Diamond</option>
+            <option value="">Paltinum</option>
+            <option value="">Gold</option>
+            <option value="">Silver</option>
+            <option value="">Member</option>
+        </select></label>
+        <label for="" style="margin-left: 80px">Discount <select name="" id="">
+            <option value="">Discount 10%</option>
+            <option value="">Discount 25%</option>
+            <option value="">Discount 50%</option>
+        </select></label>
+        <label for="" style="margin-left: 80px">How many people <input type="text" placeholder="Input people"></label>
+        <br><br><br>
+        <label for="">Number of rental days <input type="text" placeholder="Input day"></label>
+        <label for="" style="margin-left: 80px">Type of service <select name="" id="">
+            <option value="">Villa</option>
+            <option value="">House</option>
+            <option value="">Room</option>
+        </select></label>
+        <label for="" style="margin-left: 80px">Type of service <select name="" id="">
+            <option value="">Vip</option>
+            <option value="">Bussiness</option>
+            <option value="">Nomal</option>
+        </select></label>
+    </form>
+        <br><br><br>
+        <button onclick="getData()" style="">Submit</button>
+    </div>
+    <h2 style="text-align: center;">CONFIRM INFOMATION</h2>
+    <div class="info">
+        <p id="infoName"></p>
+        <label for="">
+            <p id="infoTypeOfCm"></p>
+            <p id="number"></p>
+        </label>
+    </div>
+
+    <script>
+        function getData() {
+            document.getElementById('infoName').innerHTML = 'Name: ' + (document.getElementById('name').value);
+            document.getElementById('infoTypeOfCm').innerHTML = document.getElementById('typeOfCm').value;
+        }
+    </script>
+</body>
+</html>

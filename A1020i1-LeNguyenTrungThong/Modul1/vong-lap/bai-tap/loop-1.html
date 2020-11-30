@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập vòng lặp 1</title>
+</head>
+<body>
+<!--Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.-->
+<!--<script>-->
+<!--    for (let i=1; i<=100; i++){-->
+<!--        console.log(i);-->
+<!--        if (i==99){-->
+<!--            alert(i+'hoan thanh');-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.
+Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ.
+Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.-->
+<!--<script>-->
+<!--    let a;-->
+<!--    do {-->
+<!--        a = parseInt(prompt("nhập vào nhiệt độ"));-->
+<!--        if (a > 100) {-->
+<!--            alert("vui lòng giảm nhiệt độ");-->
+<!--        } else if (a < 20) {-->
+<!--            alert("vui lòng tăng nhiệt độ");-->
+<!--        }-->
+<!--    }while (a<20 || a >100);-->
+<!--</script>-->
+
+
+<!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<!--<script>-->
+<!--    let a =0;-->
+<!--    let b =1;-->
+<!--    let c ='';-->
+<!--    string = a+ ',' + b+',';-->
+<!--    for (i=0; i<=20; i++){-->
+<!--        let c =a+b;-->
+<!--        string += c +',';-->
+<!--        a=b;-->
+<!--        b=c;-->
+<!--    }-->
+<!--    console.log(string);-->
+<!--</script>-->
+
+
+<!--Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
+<!--<script>-->
+<!--    let a =0;-->
+<!--    let b=1;-->
+<!--    check=true;-->
+<!--    let d=0;-->
+<!--    let string = a+ ','+b+',';-->
+<!--    for (i=0; i<10; i++){-->
+<!--        let c = a+b;-->
+<!--        string+=c +',';-->
+<!--        a=b;-->
+<!--        b=c;-->
+<!--        if (c%5==0 && check==true){-->
+<!--            d=c;-->
+<!--            check=false;-->
+<!--        }-->
+<!--    }-->
+<!--    console.log(string);-->
+<!--    console.log('so dau tien chia het cho 5 la '+d);-->
+<!--</script>-->
+
+<!--Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+<script>
+    let a =0;
+    let b=1;
+    let string = a+'+'+b+'+';
+    let sum;
+    for (let i=0; i<20; i++){
+        c=a+b;
+        string+=c+'+';
+        sum+= string;
+        a=b;
+        b=c;
+    }
+    console.log(string);
+    console.log(sum);
+</script>
+</body>
+</html>
