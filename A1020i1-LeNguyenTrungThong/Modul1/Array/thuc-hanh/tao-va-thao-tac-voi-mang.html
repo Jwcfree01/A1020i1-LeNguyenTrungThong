@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo và thao tác với mảng</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="Input in Array">
+<button onclick="add()">Add</button>
+<button onclick="dis()">Display</button>
+<p id="show"></p>
+<script>
+    let arr = new Array();
+    let x = 0;
+    function add() {
+        arr[x] = document.getElementById('nhap').value;
+        x++;
+        document.getElementById('nhap').value = "";
+    }
+
+    function dis() {
+        let b = '';
+        for (let i=0; i<arr.length; i++){
+            b += 'element ' + i + '=' + arr[i] + '<br/>';
+        }
+        document.getElementById('show').innerHTML = b;
+    }
+</script>
+</body>
+</html>

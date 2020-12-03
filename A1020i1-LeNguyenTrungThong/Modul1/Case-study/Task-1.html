@@ -7,15 +7,20 @@
         .furama{
             width: 1000px;
             height: auto;
-            background-color: pink;
             margin: 0px auto;
         }
 
-        .info{
-            width: 1000px;
+        .left{
+            width: 300px;
             height: auto;
-            background-color: yellow;
-            margin: 0px auto;
+            float: left;
+            margin-left: 200px;
+        }
+
+        .right{
+            float: left;
+            width: 300px;
+            height: auto;
         }
 
     </style>
@@ -23,60 +28,141 @@
 <body>
     <h2 style="text-align: center">INFOMATION FORM</h2>
     <div class="furama">
-    <form action="">
-        <label for="">Name  <input type="text" placeholder="Name" id="name"></label>
+    <form action="" style="border: 2px solid black">
+        <label for="" style="margin-left: 20px; color: red">Name  <input type="text" placeholder="Name" id="name"></label>
         <label for=""><select name="" id="typeOfCm" style="margin-left: 50px">
-            <option value="">CMND</option>
-            <option value="">Căn cước công dân</option>
+            <option value="CMND: ">CMND</option>
+            <option value="Căn cước công dân: ">Căn cước công dân</option>
         </select></label>
-        <label for="" ><input type="text" placeholder="Nhập số giấy tờ"></label>
-        <label for="" style="margin-left: 80px">Date Of Birth  <input type="date" placeholder="Date Of Birth"></label>
+        <label for="" ><input type="text" placeholder="Nhập số giấy tờ" id="so"></label>
+        <label for="" style="margin-left: 80px">Date Of Birth  <input id="DoB" type="date" placeholder="Date Of Birth"></label>
+
         <br><br><br>
-        <label for="">Address  <input type="text" style="width: 400px" placeholder="Input Address"></label>
-        <label for="" style="margin-left: 80px">Email  <input type="email" placeholder="Input email"></label>
+
+        <label for="" style="margin-left: 20px;">Address  <input id="address" type="text" style="width: 400px" placeholder="Input Address"></label>
+        <label for="" style="margin-left: 80px">Email  <input id="email" type="email" placeholder="Input email"></label>
+
         <br><br><br>
-        <label for="">Customer type  <select name="">
-            <option value="">Diamond</option>
-            <option value="">Paltinum</option>
-            <option value="">Gold</option>
-            <option value="">Silver</option>
-            <option value="">Member</option>
+
+        <label for="" style="margin-left: 20px;">Customer type  <select id="cus" name="">
+            <option value="Diamond">Diamond</option>
+            <option value="Paltinum">Paltinum</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+            <option value="Member">Member</option>
         </select></label>
-        <label for="" style="margin-left: 80px">Discount <select name="" id="">
-            <option value="">Discount 10%</option>
-            <option value="">Discount 25%</option>
-            <option value="">Discount 50%</option>
+        <label for="" style="margin-left: 80px">Discount <select name="" id="Dis">
+            <option value="Discount 10%">Discount 10%</option>
+            <option value="Discount 25%">Discount 25%</option>
+            <option value="Discount 50%">Discount 50%</option>
         </select></label>
-        <label for="" style="margin-left: 80px">How many people <input type="text" placeholder="Input people"></label>
+        <label for="" style="margin-left: 80px">How many people <input id="people" type="text" placeholder="Input people"></label>
+
         <br><br><br>
-        <label for="">Number of rental days <input type="text" placeholder="Input day"></label>
-        <label for="" style="margin-left: 80px">Type of service <select name="" id="">
-            <option value="">Villa</option>
-            <option value="">House</option>
-            <option value="">Room</option>
+
+        <label for="" style="margin-left: 20px;">Number of rental days <input id="num-day" type="text" placeholder="Input day"></label>
+        <label for="" style="margin-left: 80px">Type of home <select name="" id="home">
+            <option value="Villa">Villa</option>
+            <option value="House">House</option>
+            <option value="Room">Room</option>
         </select></label>
-        <label for="" style="margin-left: 80px">Type of service <select name="" id="">
-            <option value="">Vip</option>
-            <option value="">Bussiness</option>
-            <option value="">Nomal</option>
+        <label for="" style="margin-left: 80px">Type of service <select name="" id="service">
+            <option value="Vip">Vip</option>
+            <option value="Bussiness">Bussiness</option>
+            <option value="Nomal">Nomal</option>
         </select></label>
     </form>
-        <br><br><br>
-        <button onclick="getData()" style="">Submit</button>
+
+    <br>
+
+    <button onclick="getData()" style="float: left">Customer info</button>
+    <button onclick="getData()" style="float: left; margin-left: 20px">Edit info</button>
     </div>
-    <h2 style="text-align: center;">CONFIRM INFOMATION</h2>
-    <div class="info">
+
+    <h2 style="text-align: center; clear: left">CONFIRM INFOMATION</h2>
+
+    <div class="left">
         <p id="infoName"></p>
         <label for="">
-            <p id="infoTypeOfCm"></p>
-            <p id="number"></p>
+            <p id="infoTypeOfCm" style="float: left;margin-top: -5px"></p>
+            <p id="number" style="float: left; margin-top: -5px"></p>
         </label>
+        <p id="typeDoB" style="clear: left"></p>
+        <p id="add"></p>
+        <p id="aemail"></p>
+    </div>
+
+    <div class="right">
+        <p id="typecus"></p>
+        <p id="typeDis"></p>
+        <p id="typeHome"></p>
+        <p id="typeService"></p>
+        <p id="typePeople"></p>
+        <p id="typeNum-day"></p>
+    </div>
+
+    <div class="money">
+        <p id="ttName"></p>
+        <p id="ttHome"></p>
+        <p id="ttNum-day"></p>
+        <p id="ttDis"></p>
+        <p id="ttTotal" style="color: red; font-size: 30px"></p>
     </div>
 
     <script>
         function getData() {
             document.getElementById('infoName').innerHTML = 'Name: ' + (document.getElementById('name').value);
             document.getElementById('infoTypeOfCm').innerHTML = document.getElementById('typeOfCm').value;
+            document.getElementById('number').innerHTML = document.getElementById('so').value;
+            document.getElementById('typeDoB').innerHTML = 'Date Of Birth: ' + (document.getElementById('DoB').value);
+            document.getElementById('add').innerHTML = 'Address: ' + document.getElementById('address').value;
+            document.getElementById('aemail').innerHTML = 'Email: ' + document.getElementById('email').value;
+            document.getElementById('typecus').innerHTML = 'Customer type: ' + document.getElementById('cus').value;
+            //lấy giá khuyển mãi theo %
+            let r = document.getElementById('Dis').value;
+            document.getElementById('typeDis').innerHTML = r;
+            document.getElementById('typePeople').innerHTML = 'How many people: ' + document.getElementById('people').value;
+            //lấy số ngày ở lại ks
+            let day = parseInt(document.getElementById('num-day').value);
+            document.getElementById('typeNum-day').innerHTML = 'Number of rental days: '+ day;
+            // document.getElementById('ttNum-day').innerHTML = 'Number of rental days: '+ day;
+            //lấy giá theo loại phòng
+            let a = document.getElementById('home').value;
+            document.getElementById('typeHome').innerHTML = 'Type of home: '+ a;
+            document.getElementById('typeService').innerHTML = 'Type of service: ' + document.getElementById('service').value;
+
+            //tinh tien
+            // let c;
+            // let n = 500;
+            // let m = 300;
+            // let e = 100;
+            // if (a == 'Villa'){
+            //     document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + n + 'USD';
+            //     c=n;
+            // }else if (a == 'House'){
+            //     document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + m + 'USD';
+            //     c = m;
+            // } else {
+            //     document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + e + 'USD';
+            //     c = e;
+            // }
+            //
+            // let dis1 = 0.1;
+            // let dis2 = 0.25;
+            // let dis3 = 0.5;
+            // let dis;
+            // if (r == 'Discount 10%'){
+            //     document.getElementById('ttDis').innerHTML = r;
+            //     dis = dis1;
+            // } else if (r == 'Discount 25%'){
+            //     document.getElementById('ttDis').innerHTML = r;
+            //     dis = dis2
+            // }else {
+            //     document.getElementById('ttDis').innerHTML = r;
+            //     dis = dis3;
+            // }
+            //
+            // document.getElementById('ttTotal').innerHTML ='Total ' + ((c * day) - ((c*day)*dis));
         }
     </script>
 </body>

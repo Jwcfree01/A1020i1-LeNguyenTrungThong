@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị trong mảng</title>
+</head>
+<body>
+<input type="text" placeholder="Input number" id="nhap">
+<button onclick="search()">Search</button>
+<p id="show"></p>
+    <script>
+function search() {
+    let e='';
+    let arr = [1,2,3,4,5,6];
+    let b = document.getElementById('nhap').value;
+    for (let i = 0; i < arr.length; i++) {
+        if (b == arr[i]) {
+            e = 'da tim thay gia tri ' + arr[i] + ' tai chi so ' + i;
+            break;
+        }else {
+            console.log('khong co phan tu nao');
+        }
+    }
+    document.getElementById('show').innerHTML = e;
+}
+    </script>
+</body>
+</html>

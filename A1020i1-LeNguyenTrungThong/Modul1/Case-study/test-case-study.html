@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<input type="text" placeholder="nhap" id="nhap">
+<button onclick="test()">Kiemtra</button>
+<button onclick="edit()">Edit</button>
+<p id="hienthi"></p>
+
+<script>
+
+    function test() {
+    let a = document.getElementById('nhap').value ;
+    document.getElementById('nhap').value='' ;
+    document.getElementById('hienthi').innerHTML= a ;
+    }
+    function edit() {
+    let n = document.getElementById('hienthi').innerText;
+    document.getElementById('nhap').value=n;
+    }
+</script>
+</body>
+</html>

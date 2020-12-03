@@ -70,20 +70,59 @@ Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.--
 <!--</script>-->
 
 <!--Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
-<script>
-    let a =0;
-    let b=1;
-    let string = a+'+'+b+'+';
-    let sum;
-    for (let i=0; i<20; i++){
-        c=a+b;
-        string+=c+'+';
-        sum+= string;
-        a=b;
-        b=c;
-    }
-    console.log(string);
-    console.log(sum);
-</script>
+<!--<script>-->
+<!--    let a =0;-->
+<!--    let b =1;-->
+<!--    let c ='';-->
+<!--    let string = a+ ',' + b+',';-->
+<!--    let kq=a+b;-->
+<!--    for (i=0; i<=20; i++){-->
+<!--        let c =a+b;-->
+<!--        kq+=c;-->
+<!--        string += c +',';-->
+<!--        a=b;-->
+<!--        b=c;-->
+<!--    }-->
+<!--    document.write(kq);-->
+<!--    console.log(string);-->
+<!--</script>-->
+
+<!--Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.-->
+<!--<script>-->
+<!--    let number = parseInt(prompt("nhap so luong so chia het cho 7: "));-->
+<!--    let count = 0;-->
+<!--    let result = 0;-->
+<!--    let n =0;-->
+<!--    while (count < number) {-->
+<!--        if (n%7===0){-->
+<!--            count++;-->
+<!--            console.log(n);-->
+<!--            result +=n;-->
+<!--        }-->
+<!--        n++;-->
+<!--    }-->
+<!--    document.write(result);-->
+<!--</script>-->
+
+<!--Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100.
+Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
+Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".-->
+<!--<script>-->
+<!--    for (let i=1; i<101; i++){-->
+<!--        if (i%3==0 && i%5==0){-->
+<!--            console.log('FizzBuzz')-->
+<!--        }else if (i%5==0){-->
+<!--            console.log('Buzz');-->
+<!--        }else if (i%3==0){-->
+<!--            console.log('Fizz');-->
+<!--        }else {-->
+<!--            console.log(i);-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+
+</body>
+</html>
 </body>
 </html>

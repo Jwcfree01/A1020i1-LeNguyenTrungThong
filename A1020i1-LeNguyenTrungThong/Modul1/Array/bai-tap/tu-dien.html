@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<input type="text" placeholder="nhap tu can tim" id="tt">
+<button onclick="sub()">submit</button>
+<script>
+    let el = ['hi', 'search','check'];
+    let vn = ['xinchao', 'timkiem', 'kiemtra'];
+    function sub() {
+        let a =document.getElementById('tt').value;
+        let check = false;
+        for (let i=0; i<el.length; i++){
+            if (a==el[i]){
+                check=true;
+                alert(vn[i]);
+                break;
+            }
+        }
+        if (check==false){
+            alert('khong co');
+        }
+
+    }
+</script>
+</body>
+</html>
