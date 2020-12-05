@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào mảng vào đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+<!--Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên
+và đảo ngược các phần tử trong mảng đó.-->
+<script>
+    let a = parseInt(prompt('mang co bao nhieu phan tu?'));
+    let arr = new Array(a);
+    for (i=0; i<arr.length; i++){
+        arr[i] = parseInt(prompt('nhap phan tu thu ' + i));
+    }
+    console.log(arr);
+    document.write(arr.reverse());
+</script>
+</body>
+</html>

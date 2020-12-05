@@ -30,12 +30,29 @@
 <!--</script>-->
 
 <!--Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau-->
+<!--<script>-->
+<!--    for (let i=0; i<5; i++){-->
+<!--            document.write('*');-->
+<!--        for (let j=0; j<i; j++){-->
+<!--            document.write('*' );-->
+<!--        }-->
+<!--        document.write('<br/>');-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 4: In hình chữ nhật-->
 <script>
-    for (let i=1; i<4; i++){
-        document.write(i);
-        for (let j=1; j<6; j++){
-            document.write('a');
+    for(i=0; i<4; i++){
+        document.write('*');
+        for (j=0; j<10; j++){
+            let check = true;
+            if (check==true){
+                document.write('*');
+            }else{
+                document.write('a');
+            }
         }
+        document.write('<br/>');
     }
 </script>
 </body>

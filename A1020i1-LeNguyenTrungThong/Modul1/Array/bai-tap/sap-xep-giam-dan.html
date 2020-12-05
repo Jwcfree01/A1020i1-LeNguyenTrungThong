@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp giảm dần</title>
+</head>
+<body>
+<!--Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+ Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.-->
+<script>
+    let a = parseInt(prompt('co bao nhieu phan tu trong mang'));
+    let arr = new Array(a);
+    for (let i=0; i<arr.length; i++) {
+        arr[i] = parseInt(prompt('nhap phan tu thu ' + i));
+        arr.sort(function (a,b) {
+            return a-b;
+        })
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

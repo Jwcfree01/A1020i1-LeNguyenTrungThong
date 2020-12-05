@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào 2 mảng sau đó gọp thành 1 mảng</title>
+</head>
+<body>
+<!--Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử,
+gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.-->
+<script>
+    let a = parseInt(prompt('mang 1 gom bao nhieu phan tu?'));
+    let arr = new Array(a);
+    for (let i=0; i<arr.length; i++){
+        arr[i] = parseInt(prompt('nhap vao phan tu thu: ' + i));
+    }
+
+    let b = parseInt(prompt('mang 2 gom bao nhieu phan tu?'));
+    let array = new Array(b);
+    for (let j=0; j<array.length; j++){
+        array[j] = parseInt(prompt('nhap vao phan tu thu: ' + j));
+    }
+    document.write(NewArray = arr.concat(array));
+</script>
+</body>
+</html>

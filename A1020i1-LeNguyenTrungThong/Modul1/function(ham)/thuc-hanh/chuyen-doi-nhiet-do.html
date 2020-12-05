@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<input type="text" placeholder="nhập độ F" id="doF">
+<button onclick="chuyen()">change</button>
+
+<script>
+    function chuyen() {
+        let a = document.getElementById('doF').value;
+        let c = (a - 32)/1.8;
+        alert(c);
+    }
+</script>
+</body>
+</html>

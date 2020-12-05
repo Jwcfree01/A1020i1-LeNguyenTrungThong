@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm kiếm trong mảng</title>
+</head>
+<body>
+<!--Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+Nếu V thuộc mảng số nguyên thì in ra "V is in the array"
+còn lại in ra "V is not in the array".-->
+<script>
+    let arr = new Array(5);
+    let b = parseInt(prompt('nhap phan tu can tim'));
+    let kq;
+    let check = false;
+    for (i=0; i<arr.length; i++){
+        arr[i] = parseInt(prompt('nhap phan tu thu ' + i));
+        if (arr[i]==b){
+            check=true;
+            kq = ('V is in the array');
+        }
+    }
+    if (check==false){
+        kq = ('V is not in the array');
+    }
+    console.log(kq);
+</script>
+</body>
+</html>

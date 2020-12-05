@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra số trung bình của các phần tử trong mảng</title>
+</head>
+<body>
+<!--Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện
+giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
+<script>
+    let a = parseInt(prompt('mảng bạn có bao nhiêu phần tử?'));
+    let arr = new Array(a);
+    let max = 0;
+    let gt = 0;
+    for (let i=0; i<arr.length; i++){
+        arr[i] = parseInt(prompt('nhap phan tu vao mang'));
+        if (arr[i]>max){
+            max= arr[i];
+        }
+        gt+=arr[i];
+    }
+    document.write(max + '<br/>');
+    document.write(gt/a);
+
+</script>
+</body>
+</html>
