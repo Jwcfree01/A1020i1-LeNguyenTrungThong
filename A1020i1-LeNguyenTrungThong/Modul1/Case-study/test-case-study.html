@@ -5,21 +5,26 @@
     <title>test</title>
 </head>
 <body>
-<input type="text" placeholder="nhap" id="nhap">
+<input type="text" placeholder="nhap so tuoi" id="nhap">
 <button onclick="test()">Kiemtra</button>
 <button onclick="edit()">Edit</button>
-<p id="hienthi"></p>
+<p>Hiển thị: <span id="hienthi"></span></p>
+
+<label for="">Type of service <select name="" id="service">
+    <option value="Vip">Vip</option>
+    <option value="Bussiness">Bussiness</option>
+    <option value="Nomal">Nomal</option>
+</select></label>
 
 <script>
 
     function test() {
     let a = document.getElementById('nhap').value ;
     document.getElementById('nhap').value='' ;
-    document.getElementById('hienthi').innerHTML= a ;
+    document.getElementById('hienthi').innerHTML= a;
     }
     function edit() {
-    let n = document.getElementById('hienthi').innerText;
-    document.getElementById('nhap').value=n;
+    document.getElementById('nhap').value= document.getElementById('hienthi').innerText;
     }
 </script>
 </body>

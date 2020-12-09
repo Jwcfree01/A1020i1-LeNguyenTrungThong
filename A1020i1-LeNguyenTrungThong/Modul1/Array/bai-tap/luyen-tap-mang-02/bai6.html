@@ -8,11 +8,15 @@
 <!--Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-)
  và thay thế các ký tự này bởi ký tự ( _ )-->
 <script>
-    let a =prompt('nhap vao 1 chuoi ki tu co -');
-    let change;
-    if (a== '-'){
-        change =
+    let arr = ['b','-'];
+    console.log(arr);
+    change = '_'
+    for (i=0; i<arr.length; i++){
+        if (arr[i]== '-'){
+            arr[i]= change;
+        }
     }
+    console.log(arr);
 </script>
 </body>
 </html>

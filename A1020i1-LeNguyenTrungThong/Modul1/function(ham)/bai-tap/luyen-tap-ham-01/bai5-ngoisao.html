@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngôi sao</title>
+</head>
+<body>
+<!--bài ngôi sao và chòm sao-->
+<script>
+    let ngoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let searchSao= prompt('nhap vao ten ngoi sao ban can tim');
+    check=false;
+    function sao() {
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (searchSao == ngoiSao[i]) {
+                alert(chomSao[i]);
+                check=true;
+            }
+        }if (check == false){
+            alert('khong co ngoi sao nao');
+        }
+    }
+    sao();
+</script>
+</body>
+</html>

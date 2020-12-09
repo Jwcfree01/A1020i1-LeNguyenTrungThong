@@ -23,6 +23,12 @@
             height: auto;
         }
 
+        .changecolor{
+            color: orangered;
+        }
+        .changecolor1{
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -31,8 +37,8 @@
     <form action="" style="border: 2px solid black">
         <label for="" style="margin-left: 20px; color: red">Name  <input type="text" placeholder="Name" id="name"></label>
         <label for=""><select name="" id="typeOfCm" style="margin-left: 50px">
-            <option value="CMND: ">CMND</option>
-            <option value="Căn cước công dân: ">Căn cước công dân</option>
+            <option value="CMND ">CMND</option>
+            <option value="Căn cước công dân ">Căn cước công dân</option>
         </select></label>
         <label for="" ><input type="text" placeholder="Nhập số giấy tờ" id="so"></label>
         <label for="" style="margin-left: 80px">Date Of Birth  <input id="DoB" type="date" placeholder="Date Of Birth"></label>
@@ -40,22 +46,23 @@
         <br><br><br>
 
         <label for="" style="margin-left: 20px;">Address  <input id="address" type="text" style="width: 400px" placeholder="Input Address"></label>
-        <label for="" style="margin-left: 80px">Email  <input id="email" type="email" placeholder="Input email"></label>
+                <label for="" style="margin-left: 80px">Province/City <select name="" id="Dis">
+                    <option value="Đà Nẵng">Đà Nẵng</option>
+                    <option value="Huế">Huế</option>
+                    <option value="Quảng Nam">Quảng Nam</option>
+                    <option value="Khác">Khác</option>
+                </select></label>
 
         <br><br><br>
 
         <label for="" style="margin-left: 20px;">Customer type  <select id="cus" name="">
             <option value="Diamond">Diamond</option>
-            <option value="Paltinum">Paltinum</option>
+            <option value="Platinum">Platinum</option>
             <option value="Gold">Gold</option>
             <option value="Silver">Silver</option>
             <option value="Member">Member</option>
         </select></label>
-        <label for="" style="margin-left: 80px">Discount <select name="" id="Dis">
-            <option value="Discount 10%">Discount 10%</option>
-            <option value="Discount 25%">Discount 25%</option>
-            <option value="Discount 50%">Discount 50%</option>
-        </select></label>
+        <label for="" style="margin-left: 80px">Email  <input id="email" type="email" placeholder="Input email"></label>
         <label for="" style="margin-left: 80px">How many people <input id="people" type="text" placeholder="Input people"></label>
 
         <br><br><br>
@@ -76,29 +83,31 @@
     <br>
 
     <button onclick="getData()" style="float: left">Customer info</button>
-    <button onclick="getData()" style="float: left; margin-left: 20px">Edit info</button>
+    <button onclick="upData()" style="float: left; margin-left: 20px">Edit info</button>
     </div>
 
     <h2 style="text-align: center; clear: left">CONFIRM INFOMATION</h2>
 
     <div class="left">
-        <p id="infoName"></p>
-        <label for="">
-            <p id="infoTypeOfCm" style="float: left;margin-top: -5px"></p>
-            <p id="number" style="float: left; margin-top: -5px"></p>
-        </label>
-        <p id="typeDoB" style="clear: left"></p>
-        <p id="add"></p>
-        <p id="aemail"></p>
+        <p class="changecolor">Name: <span class="changecolor1" id="infoName"></span></p>
+
+
+        <p class="changecolor">Card type <span class="changecolor1" id="infoTypeOfCm"></span></p>
+        <p class="changecolor">Card number: <span class="changecolor1" id="number"></span></p>
+
+
+        <p class="changecolor" style="clear: left">Date Of Birth: <span class="changecolor1" id="typeDoB"></span></p>
+        <p class="changecolor">Address: <span class="changecolor1" id="add"></span></p>
+        <p class="changecolor">Email: <span class="changecolor1" id="aemail"></span></p>
     </div>
 
     <div class="right">
-        <p id="typecus"></p>
-        <p id="typeDis"></p>
-        <p id="typeHome"></p>
-        <p id="typeService"></p>
-        <p id="typePeople"></p>
-        <p id="typeNum-day"></p>
+        <p class="changecolor">Customer type: <span class="changecolor1" id="typecus"></span></p>
+        <p class="changecolor">Discount: <span class="changecolor1" id="typeDis"></span></p>
+        <p class="changecolor">Type of home: <span class="changecolor1" id="typeHome"></span></p>
+        <p class="changecolor">Type of service: '<span class="changecolor1" id="typeService"></span></p>
+        <p class="changecolor">How many people: <span class="changecolor1" id="typePeople"></span></p>
+        <p class="changecolor">Number of rental days: <span class="changecolor1" id="typeNum-day"></span></p>
     </div>
 
     <div class="money">
@@ -111,58 +120,125 @@
 
     <script>
         function getData() {
-            document.getElementById('infoName').innerHTML = 'Name: ' + (document.getElementById('name').value);
+            document.getElementById('infoName').innerHTML =(document.getElementById('name').value);
+            document.getElementById('name').value='' ;
             document.getElementById('infoTypeOfCm').innerHTML = document.getElementById('typeOfCm').value;
+            document.getElementById('typeOfCm').value='' ;
             document.getElementById('number').innerHTML = document.getElementById('so').value;
-            document.getElementById('typeDoB').innerHTML = 'Date Of Birth: ' + (document.getElementById('DoB').value);
-            document.getElementById('add').innerHTML = 'Address: ' + document.getElementById('address').value;
-            document.getElementById('aemail').innerHTML = 'Email: ' + document.getElementById('email').value;
-            document.getElementById('typecus').innerHTML = 'Customer type: ' + document.getElementById('cus').value;
+            document.getElementById('so').value='' ;
+            document.getElementById('typeDoB').innerHTML = (document.getElementById('DoB').value);
+            document.getElementById('DoB').value='' ;
+            document.getElementById('add').innerHTML = document.getElementById('address').value;
+            document.getElementById('address').value='' ;
+            document.getElementById('aemail').innerHTML = document.getElementById('email').value;
+            document.getElementById('email').value='' ;
+            let cus = document.getElementById('cus').value;
+            document.getElementById('typecus').innerHTML= cus;
+            document.getElementById('cus').value='' ;
             //lấy giá khuyển mãi theo %
             let r = document.getElementById('Dis').value;
+            document.getElementById('Dis').value='' ;       //tạo ô input trống sau khi get dữ liệu
             document.getElementById('typeDis').innerHTML = r;
-            document.getElementById('typePeople').innerHTML = 'How many people: ' + document.getElementById('people').value;
+            document.getElementById('typePeople').innerHTML = document.getElementById('people').value;
+            document.getElementById('people').value='' ;
             //lấy số ngày ở lại ks
             let day = parseInt(document.getElementById('num-day').value);
-            document.getElementById('typeNum-day').innerHTML = 'Number of rental days: '+ day;
-            // document.getElementById('ttNum-day').innerHTML = 'Number of rental days: '+ day;
+            document.getElementById('num-day').value='' ;
+            document.getElementById('typeNum-day').innerHTML = day;
+            document.getElementById('ttNum-day').innerHTML = 'Number of rental days: '+ day;
             //lấy giá theo loại phòng
             let a = document.getElementById('home').value;
-            document.getElementById('typeHome').innerHTML = 'Type of home: '+ a;
-            document.getElementById('typeService').innerHTML = 'Type of service: ' + document.getElementById('service').value;
+            document.getElementById('home').value='' ;
+            document.getElementById('typeHome').innerHTML = a;
+            document.getElementById('typeService').innerHTML = document.getElementById('service').value;
+            document.getElementById('service').value='' ;
 
-            //tinh tien
-            // let c;
-            // let n = 500;
-            // let m = 300;
-            // let e = 100;
-            // if (a == 'Villa'){
-            //     document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + n + 'USD';
-            //     c=n;
-            // }else if (a == 'House'){
-            //     document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + m + 'USD';
-            //     c = m;
-            // } else {
-            //     document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + e + 'USD';
-            //     c = e;
-            // }
-            //
-            // let dis1 = 0.1;
-            // let dis2 = 0.25;
-            // let dis3 = 0.5;
-            // let dis;
-            // if (r == 'Discount 10%'){
-            //     document.getElementById('ttDis').innerHTML = r;
-            //     dis = dis1;
-            // } else if (r == 'Discount 25%'){
-            //     document.getElementById('ttDis').innerHTML = r;
-            //     dis = dis2
-            // }else {
-            //     document.getElementById('ttDis').innerHTML = r;
-            //     dis = dis3;
-            // }
-            //
-            // document.getElementById('ttTotal').innerHTML ='Total ' + ((c * day) - ((c*day)*dis));
+            //tinh tien theo type of home
+            let c;
+            let n = 500;
+            let m = 300;
+            let e = 100;
+            if (a == 'Villa'){
+                document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + n + 'USD';
+                c=n;
+            }else if (a == 'House'){
+                document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + m + 'USD';
+                c = m;
+            } else {
+                document.getElementById('ttHome').innerHTML= 'Type of home '+ a+ ': ' + e + 'USD';
+                c = e;
+            }
+
+            // tính tiền theo address province/city
+            let dis1 = 20;
+            let dis2 = 10;
+            let dis3 = 5;
+            let dis;
+            if (r == 'Đà Nẵng'){
+                document.getElementById('ttDis').innerHTML = r;
+                dis = dis1;
+            } else if (r == 'Huế'){
+                document.getElementById('ttDis').innerHTML = r;
+                dis = dis2
+            }else if (r=='Quảng Nam') {
+                document.getElementById('ttDis').innerHTML = r;
+                dis = dis3;
+            }else {
+                document.getElementById('ttDis').innerHTML = r;
+                dis = 0 ;
+            }
+            // console.log(c);
+            // console.log(typeof (c));
+            // console.log(day);
+            // console.log(typeof (day));
+            // console.log(dis);
+            // console.log(typeof (dis));
+
+            // tính tiền theo số ngày ở lại (day)
+            let totalMoneyDay;
+            if (day>7){
+                totalMoneyDay = 30;
+            }else if (day >= 5){
+                totalMoneyDay = 20;
+            }else if (day >= 2){
+                totalMoneyDay = 10;
+            }else {
+                totalMoneyDay = 0;
+            }
+            // console.log('123'+totalMoneyDay);
+            // console.log(typeof (totalMoneyDay));
+
+            //tính tiền theo loại customer
+            let totalMoneyCus;
+            if (cus == 'Diamond'){
+                totalMoneyCus = 15;
+            }else if (cus=='Platinum'){
+                totalMoneyCus = 10;
+            }else if (cus=='Gold'){
+                totalMoneyCus= 5;
+            }else if (cus=='Silver'){
+                totalMoneyCus= 2;
+            }else {
+                totalMoneyCus= 0;
+            }
+            // console.log('123 '+totalMoneyCus);
+            // console.log(typeof (totalMoneyCus));
+            document.getElementById('ttTotal').innerHTML ='Total ' + ((c * day) - dis-totalMoneyCus-totalMoneyDay);
+        }
+
+        function upData() {
+            document.getElementById('name').value = document.getElementById('infoName').innerText;
+            document.getElementById('typeOfCm').value = document.getElementById('infoTypeOfCm').innerHTML;
+            document.getElementById('so').value = document.getElementById('number').innerText;
+            document.getElementById('DoB').value = document.getElementById('typeDoB').innerText;
+            document.getElementById('address').value = document.getElementById('add').innerText;
+            document.getElementById('email').value = document.getElementById('aemail').innerText;
+            document.getElementById('cus').value = document.getElementById('typecus').innerText;
+            document.getElementById('Dis').value = document.getElementById('typeDis').innerText;
+            document.getElementById('people').value = document.getElementById('typePeople').innerText;
+            document.getElementById('num-day').value = document.getElementById('typeNum-day').innerText;
+            document.getElementById('home').value = document.getElementById('typeHome').innerText;
+            document.getElementById('service').value = document.getElementById('typeService').innerText;
         }
     </script>
 </body>

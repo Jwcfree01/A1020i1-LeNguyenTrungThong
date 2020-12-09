@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('nhap vao so'));
+    let check = true;
+    for (let i=2; i<a; i++){
+        if (a % i ===0){
+            check=false;
+            console.log(a + 'khong phai la so nguyen to');
+            break;
+        }
+    }
+    if (a==1) {
+        console.log(a + ' khong phai la so nguyen to');
+    }else if (check){
+        console.log(a + ' la so nguyen to');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi đơn vị</title>
+</head>
+<body>
+<input type="text" placeholder="nhập số càn chuyển đổi" id="nhap">
+<button onclick="foot()">foot</button>
+<button onclick="metter()">meter</button>
+<p id="hienthi"></p>
+    <script>
+        function foot() {
+            let a = document.getElementById('nhap').value;
+            document.getElementById('hienthi').innerHTML = a * 3.279;
+        }
+        function metter() {
+            let b = document.getElementById('nhap').value;
+            document.getElementById('hienthi').innerHTML= b * 0.305;
+        }
+    </script>
+</body>
+</html>

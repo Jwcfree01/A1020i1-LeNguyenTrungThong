@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lí sản phẩm</title>
+</head>
+<body>
+<input type="text" placeholder="nhập tên sản phẩm" id="tenSP">
+<button onclick="add()">Add</button>
+<p id="kq"></p>
+<script>
+    let arr = ['iphone', 'samsung'];
+    function hienthi() {
+    let n = '<table border="1">\n' +
+        '    <tr>\n' +
+        '        <th>STT</th>\n' +
+        '        <th>Name</th>\n' +
+        '        <th>Edit</th>\n' +
+        '        <th>Delete</th>\n' +
+        '    </tr>';
+    for (i=0; i<arr.length; i++){
+        n+= '<tr>\n' +
+            '        <td>'+(i+1)+'</td>\n' +
+            '        <td>'+arr[i]+'</td>\n' +
+            '        <td><button onclick="edit('+i+')">Edit</button></td>\n' +
+            '        <td><button onclick="xoa(' +i+')">Delete</button></td>\n' +
+            '    </tr>';
+    }
+    n+= '</table>';
+    document.getElementById('kq').innerHTML = n;
+    }
+    hienthi();
+
+    function add() {
+        let newSP = document.getElementById('tenSP').value;
+        confilmA = confirm('ban co muon them moi san pham '+newSP);
+        check = true;
+        for (let i=0; i<arr.length; i++){
+            if (newSP==arr[i]){
+                check=false;
+                alert('san pham da ton tai');
+                break;
+            }
+        }
+        if (check&& confilmA && newSP!=null && newSP !=''){
+            arr.push(newSP);
+        }
+        document.getElementById('tenSP').value='';
+        hienthi();
+        console.log(arr)
+    }
+
+    function xoa(id) {
+        alert('ban muon xoa san pham ' + arr[id]);
+        arr.splice(id, 1);
+        hienthi();
+    }
+
+    function edit(id) {
+        let newName = prompt('nhap lai ten san pham cho ' +arr[id]);
+        if (newName!=null && newName!='') {
+            arr.splice(id, 1, newName);
+        }
+        hienthi();
+    }
+
+</script>
+</body>
+</html>

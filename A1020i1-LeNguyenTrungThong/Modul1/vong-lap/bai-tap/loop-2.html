@@ -42,16 +42,28 @@
 
 <!--Bài 4: In hình chữ nhật-->
 <script>
-    for(i=0; i<4; i++){
-        document.write('*');
-        for (j=0; j<10; j++){
-            let check = true;
-            if (check==true){
-                document.write('*');
-            }else{
-                document.write('a');
+    // for(i=0; i<4; i++){
+    //     document.write('*');
+    //     for (j=0; j<10; j++){
+    //         let check = true;
+    //         if (check==true){
+    //             document.write('*');
+    //         }else{
+    //             document.write('a');
+    //         }
+    //     }
+    //     document.write('<br/>');
+    // }
+    let d=20;
+    let r=5;
+    for(let i=0;i<r;i++){
+        for (let j=0; j<d; j++ ){
+                if (j==0 || j==d-1|| i==0 || i==r-1){
+                    document.write('*');
+                }else {
+                    document.write('..' );
+                }
             }
-        }
         document.write('<br/>');
     }
 </script>

@@ -8,10 +8,13 @@
 <!--Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
 Chương trình này đếm số ký tự số trong mảng.-->
 <script>
-    let arr = ['1', '2', 'a', 'b', 'n'];
+    let arr = [1, 2, 'a', 'b', 'n'];
     let count=0;
     for (let i=0; i<arr.length; i++){
-        count++;
+        if (typeof(arr[i])=="number" ) {
+            console.log(typeof arr[i] )
+            count++;
+        }
     }
     document.write(count);
 </script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<body>
+<!--Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+<script>
+    let a = parseInt(prompt('nhap vao so thu nhat'));
+    let c = parseInt(prompt('nhap vao so thu hai'));
+    let b=0;
+    function change() {
+        b=a;
+        a=c;
+        c=b;
+        return a,c;
+    }
+    console.log(change());
+</script>
+</body>
+</html>
