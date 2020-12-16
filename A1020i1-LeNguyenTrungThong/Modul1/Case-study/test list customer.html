@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addCustomer()">add</button>
+<button onclick="hienThiArr()">hienthi</button>
+<p id="demo2"></p>
+<input type="text" id="name" placeholder="name">
+<input type="text" id="age" placeholder="age">
+<input type="text" id="chihienthi" placeholder="gender">
+<p id="kq"></p>
+<script>
+    let info = [];
+
+    function hienthi() {
+        let n = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>age</th>\n' +
+            '        <th>gender</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (i=0; i<info.length; i++){
+            n += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + info[i][0] + '</td>\n' +
+                '        <td>' + info[i][1] + '</td>\n' +
+                '        <td>' + info[i][2] + '</td>\n' +
+                '        <td><button onclick="edit(' + i + ')">Edit</button></td>\n' +
+                '        <td><button onclick="xoa(' + i + ')">Delete</button></td>\n' +
+                '    </tr>';
+        }
+        n+= '</table>';
+        document.getElementById('kq').innerHTML = n;
+    }
+    hienthi();
+
+    function addCustomer() {
+        let n = document.getElementById('name').value;
+        let m = document.getElementById('age').value;
+        let j = document.getElementById('chihienthi').value;
+        info.push([n, m, j]);
+    }
+
+    function hienThiArr() {
+        hienthi(info.sort());
+        console.log(info);
+    }
+</script>
+</body>
+</html>

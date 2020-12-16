@@ -9,15 +9,14 @@
 Nếu là ký tự số hàm trả về true, ngược lại trả về false.-->
 <script>
     let a = prompt('nhap vao 1 ki tu');
-    alert(typeof (a));
     function kiemTra() {
-        if (typeof (a) == "number"){
+        if (!isNaN(a)){
             alert(a+ ' la ki tu so');
         }else {
             alert(a+ ' khong phai la ki tu so');
-        }
     }
-    alert(kiemTra());
+    }
+    kiemTra();
 </script>
 </body>
 </html>

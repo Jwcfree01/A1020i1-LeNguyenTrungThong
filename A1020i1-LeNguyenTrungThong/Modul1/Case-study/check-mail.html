@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check mail</title>
+</head>
+<body>
+<input type="email" id="email" placeholder="nhaapj email">
+<button onclick="checkmail()">check</button>
+<script>
+    function checkmail() {
+            let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!filter.test(email.value)) {
+                alert('Địa chỉ email không hợp lệ');
+            }
+    }
+</script>
+</body>
+</html>

@@ -5,26 +5,46 @@
     <title>test</title>
 </head>
 <body>
-<input type="text" placeholder="nhap so tuoi" id="nhap">
-<button onclick="test()">Kiemtra</button>
-<button onclick="edit()">Edit</button>
-<p>Hiển thị: <span id="hienthi"></span></p>
 
-<label for="">Type of service <select name="" id="service">
-    <option value="Vip">Vip</option>
-    <option value="Bussiness">Bussiness</option>
-    <option value="Nomal">Nomal</option>
-</select></label>
+<input type="text" oninput="age(this.id)" placeholder="nhap so tuoi" id="nhap1" name="1">
+<input type="text" oninput="age(this.id)" placeholder="nhap ten" id="nhap2" name="2">
+<p id="hienthi1"></p>
+<p id="hienthi2"></p>
+<button onclick="display([document.getElementById('nhap1').id,document.getElementById('hienthi1').id,
+document.getElementById('nhap2').id, document.getElementById('hienthi2').id])">Kiemtra</button>
 
 <script>
-
-    function test() {
-    let a = document.getElementById('nhap').value ;
-    document.getElementById('nhap').value='' ;
-    document.getElementById('hienthi').innerHTML= a;
+    function display(arr) {
+        alert(arr)
+        for (let i=0;i<=arr.length/2;){
+            let a = document.getElementById(arr[i]).value;
+            if (isNaN(a)){
+                console.log('sai');
+            }else {
+                document.getElementById(arr[i+1]).innerHTML = a;
+                i+=2;
+            }
+        }
     }
-    function edit() {
-    document.getElementById('nhap').value= document.getElementById('hienthi').innerText;
+    
+    function age(id) {
+        switch (id) {
+            case 'nhap1':
+               check(id);
+                break;
+            case 'nhap2':
+                check(id);
+                break;
+        }
+        function check(id) {
+            let b = document.getElementById(id).value;
+            if (isNaN(b)){
+                document.getElementById(id).style.color = 'red';
+            }else {
+                document.getElementById(id).style.color = 'green';
+            }
+        }
+
     }
 </script>
 </body>

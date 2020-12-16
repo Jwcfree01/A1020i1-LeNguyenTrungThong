@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check isInteger in js</title>
+</head>
+<body>
+<input type="text" placeholder="nhap so" id="nhap">
+<button onclick="check()">check</button>
+<script>
+    function check() {
+        let a = parseInt(document.getElementById('nhap').value);
+        console.log(typeof (a));
+        a = a.isInteger;
+        console.log(a);
+        if (a==true){
+            alert('la so')
+        }else {
+            alert('khong phai so');
+        }
+    }
+</script>
+</body>
+</html>

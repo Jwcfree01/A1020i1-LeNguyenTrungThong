@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="nhap tuoi" id="nhap" oninput="kiemtra('nhap')">
+<input type="text" placeholder="nhap tuoi" id="nhap2" oninput="kiemtra('nhap2')">
+<p id="kq"></p>
+<p id="kq2"></p>
+<button onclick="hienThi('nhap', 'kq'), hienThi('nhap2', 'kq2')">check</button>
+
+<script>
+    let a ;
+    function hienThi(inputName, resultName) {
+        a = document.getElementById(inputName).value;
+        if (isNaN(a)){
+            alert('sai dinh dang');
+        }else {
+            document.getElementById(resultName).innerHTML = a;
+        }
+    }
+
+    function kiemtra(itemName) {
+        a = document.getElementById(itemName).value;
+        if (isNaN(a)){
+            document.getElementById(itemName).style.color = 'red';
+        }else {
+            document.getElementById(itemName).style.color = 'blue';
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

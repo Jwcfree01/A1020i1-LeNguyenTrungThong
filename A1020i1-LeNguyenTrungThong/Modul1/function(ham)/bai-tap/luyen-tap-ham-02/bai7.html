@@ -7,16 +7,20 @@
 <body>
 <!--Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
 <script>
-    let a = parseInt(prompt('nhap vao so thu nhat'));
-    let c = parseInt(prompt('nhap vao so thu hai'));
-    let b=0;
-    function change() {
-        b=a;
-        a=c;
-        c=b;
-        return a,c;
+    let x = parseInt(prompt('nhap vao so thu nhat'));
+    let y = parseInt(prompt('nhap vao so thu hai'));
+    let c=0;
+    function change(arr) {
+        b=arr[0];
+        arr[0]=arr[1]
+        arr[1]=b
     }
-    console.log(change());
+    let a =[];
+    a[0]=x;
+    a[1]=y;
+    change(a);
+    console.log(a[0]);
+    console.log(a[1]);
 </script>
 </body>
 </html>
