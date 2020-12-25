@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case3</title>
+    <style>
+        body{
+            width: 99%;
+            height: 500px;
+            background-image: linear-gradient(#f9c499,#f04393);
+        }
+
+        .furama{
+            width: 1000px;
+            height: auto;
+            margin: 0px auto;
+        }
+
+        .left{
+            width: 300px;
+            height: auto;
+            float: left;
+            margin-left: 200px;
+        }
+
+        .right{
+            float: left;
+            width: 300px;
+            height: auto;
+        }
+
+        .changecolor{
+            color: white;
+        }
+        .changecolor1{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<h2 style="text-align: center">INFOMATION FORM</h2>
+<div class="furama">
+    <form action="" style="border: 2px solid black">
+        <label for="" style="margin-left: 20px;">Name  <input type="text" placeholder="Name" id="name"></label>
+        <label for=""><select name="" id="typeOfCm" style="margin-left: 50px">
+            <option value="CMND ">CMND</option>
+            <option value="Căn cước công dân ">Căn cước công dân</option>
+        </select></label>
+        <label for="" ><input type="text" placeholder="Nhập số giấy tờ" id="so"></label>
+        <label for="" style="margin-left: 80px">Date Of Birth  <input id="DoB" type="date" placeholder="Date Of Birth"></label>
+
+        <br><br><br>
+
+        <label for="" style="margin-left: 20px;">Address  <input id="address" type="text" style="width: 400px" placeholder="Input Address"></label>
+        <label for="" style="margin-left: 80px">Province/City <select name="" id="Dis">
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Huế">Huế</option>
+            <option value="Quảng Nam">Quảng Nam</option>
+            <option value="Khác">Khác</option>
+        </select></label>
+
+        <br><br><br>
+
+        <label for="" style="margin-left: 20px;">Customer type  <select id="cus" name="">
+            <option value="Diamond">Diamond</option>
+            <option value="Platinum">Platinum</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+            <option value="Member">Member</option>
+        </select></label>
+        <label for="" style="margin-left: 80px">Email <input id="email" type="email" placeholder="Input email"></label>
+        <label for="" style="margin-left: 80px">How many people <input id="people" type="text" placeholder="Input people"></label>
+
+        <br><br><br>
+
+        <label for="" style="margin-left: 20px;">Number of rental days <input id="num-day" type="text" placeholder="Input day"></label>
+        <label for="" style="margin-left: 80px">Type of home <select name="" id="home">
+            <option value="Villa">Villa</option>
+            <option value="House">House</option>
+            <option value="Room">Room</option>
+        </select></label>
+        <label for="" style="margin-left: 80px">Type of service <select name="" id="service">
+            <option value="Vip">Vip</option>
+            <option value="Bussiness">Bussiness</option>
+            <option value="Nomal">Nomal</option>
+        </select></label>
+    </form>
+
+    <br>
+
+    <button onclick="getData()" style="float: left">Customer info</button>
+    <button onclick="upData()" style="float: left; margin-left: 20px">Edit info</button>
+
+</div>
+
+<h2 style="text-align: center; clear: left">CONFIRM INFOMATION</h2>
+
+<div class="left">
+    <p class="changecolor">Name: <span class="changecolor1" id="infoName"></span></p>
+
+
+    <p class="changecolor">Card type <span class="changecolor1" id="infoTypeOfCm"></span></p>
+    <p class="changecolor">Card number: <span class="changecolor1" id="number"></span></p>
+
+
+    <p class="changecolor" style="clear: left">Date Of Birth: <span class="changecolor1" id="typeDoB"></span></p>
+    <p class="changecolor">Address: <span class="changecolor1" id="add"></span></p>
+    <p class="changecolor">Email: <span class="changecolor1" id="aemail"></span></p>
+</div>
+
+<div class="right">
+    <p class="changecolor">Customer type: <span class="changecolor1" id="typecus"></span></p>
+    <p class="changecolor">Discount: <span class="changecolor1" id="typeDis"></span></p>
+    <p class="changecolor">Type of home: <span class="changecolor1" id="typeHome"></span></p>
+    <p class="changecolor">Type of service: <span class="changecolor1" id="typeService"></span></p>
+    <p class="changecolor">How many people: <span class="changecolor1" id="typePeople"></span></p>
+    <p class="changecolor">Number of rental days: <span class="changecolor1" id="typeNum-day"></span></p>
+</div>
+
+<div class="money" style="float:left;">
+    <p id="ttName"></p>
+    <p id="ttHome"></p>
+    <p id="ttNum-day"></p>
+    <p id="ttCus"></p>
+    <p id="ttDis"></p>
+    <p id="ttTotal" style="color: red; font-size: 30px"></p>
+</div>
+
+<script>
+    function getData() {
+        let name = document.getElementById('name').value;
+        let checkName = name.toUpperCase();
+        if (!isNaN(checkName) || checkName == ''){
+            alert('ten sai dinh dang');
+            return;
+        }else {
+            document.getElementById('infoName').innerHTML = checkName;
+        }
+
+
+        document.getElementById('infoTypeOfCm').innerHTML = document.getElementById('typeOfCm').value;
+
+
+        let numCard =document.getElementById('so').value;
+        if (isNaN(numCard) || numCard==''||numCard.length !=9 ){
+            alert('so cm sai dinh dang');
+            return;
+        }else {
+            document.getElementById('number').innerHTML = numCard;
+        }
+
+
+        let dOB = document.getElementById('DoB').value;
+        document.getElementById('typeDoB').innerHTML = dOB;
+
+
+        let address = document.getElementById('address').value;
+        let checkAddress = address.toLowerCase();
+        if (checkAddress == ''){
+            alert('dia chi khong the de trong');
+            return;
+        }else {
+            document.getElementById('add').innerHTML = checkAddress;
+        }
+
+
+        let email = document.getElementById('email').value;
+        document.getElementById('aemail').innerHTML = email;
+        //check định dạng email
+        let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!filter.test(email)) {
+            alert('Địa chỉ email không hợp lệ');
+        }
+        //kết thúc check email
+
+
+        let cus = document.getElementById('cus').value;
+        document.getElementById('typecus').innerHTML= cus;
+
+
+        //lấy giá khuyển mãi theo %
+        let r = document.getElementById('Dis').value;
+        document.getElementById('typeDis').innerHTML = r;
+
+
+        let people = document.getElementById('people').value;
+        if (people == parseInt(people)) {
+            document.getElementById('typePeople').innerHTML = people;
+        }else {
+            alert('people sai dinh dang');
+            return;
+        }
+
+
+        //lấy số ngày ở lại ks
+        let day = parseInt(document.getElementById('num-day').value);
+        if (isNaN(day)){
+            alert('number of rental day error');
+            return;
+        }else {
+            document.getElementById('typeNum-day').innerHTML = day;
+        }
+
+
+        //lấy giá theo loại phòng
+        let home = document.getElementById('home').value;
+        document.getElementById('typeHome').innerHTML = home;
+        document.getElementById('typeService').innerHTML = document.getElementById('service').value;
+
+
+        //tinh tien theo type of home
+        let c;
+        let n = 500;
+        let m = 300;
+        let e = 100;
+        if (home == 'Villa'){
+            document.getElementById('ttHome').innerHTML= 'Type of home '+ home+ ': ' + n + 'USD';
+            c=n;
+        }else if (home == 'House'){
+            document.getElementById('ttHome').innerHTML= 'Type of home '+ home+ ': ' + m + 'USD';
+            c = m;
+        } else {
+            document.getElementById('ttHome').innerHTML= 'Type of home '+ home+ ': ' + e + 'USD';
+            c = e;
+        }
+
+
+        // tính tiền theo address province/city
+        let dis1 = 20;
+        let dis2 = 10;
+        let dis3 = 5;
+        let dis;
+        if (r == 'Đà Nẵng'){
+            document.getElementById('ttDis').innerHTML = r + ':'+ ' discount' +' ' +' '+ dis1 + 'USD';
+            dis = dis1;
+        } else if (r == 'Huế'){
+            document.getElementById('ttDis').innerHTML = r + ':'+ ' discount' +' ' +' '+ dis1 + 'USD';
+            dis = dis2
+        }else if (r=='Quảng Nam') {
+            document.getElementById('ttDis').innerHTML = r + ':'+ ' discount' +' ' +' '+ dis1 + 'USD';
+            dis = dis3;
+        }else {
+            document.getElementById('ttDis').innerHTML = r + ':'+ ' discount' +' ' +' '+ dis1 + 'USD';
+            dis = 0 ;
+        }
+
+
+        // tính tiền theo số ngày ở lại (day)
+        let totalMoneyDay;
+        if (day>7){
+            totalMoneyDay = 30;
+            document.getElementById('ttNum-day').innerHTML = 'Number of rental days: ' + 'discount' + ' '+ totalMoneyDay + 'USD' ;
+        }else if (day >= 5){
+            totalMoneyDay = 20;
+            document.getElementById('ttNum-day').innerHTML = 'Number of rental days: ' + 'discount' + ' '+ totalMoneyDay + 'USD' ;
+        }else if (day >= 2){
+            totalMoneyDay = 10;
+            document.getElementById('ttNum-day').innerHTML = 'Number of rental days: ' + 'discount' + ' '+ totalMoneyDay + 'USD' ;
+        }else {
+            totalMoneyDay = 0;
+            document.getElementById('ttNum-day').innerHTML = 'Number of rental days: ' + 'discount' + ' '+ totalMoneyDay + 'USD' ;
+        }
+
+
+        //tính tiền theo loại customer
+        let totalMoneyCus;
+        if (cus == 'Diamond'){
+            totalMoneyCus = 15;
+            document.getElementById('ttCus').innerHTML = 'Customer type : ' + 'discount' + ' '+ totalMoneyCus + 'USD' ;
+        }else if (cus=='Platinum'){
+            totalMoneyCus = 10;
+            document.getElementById('ttCus').innerHTML = 'Customer type : ' + 'discount' + ' '+ totalMoneyCus + 'USD' ;
+        }else if (cus=='Gold'){
+            totalMoneyCus= 5;
+            document.getElementById('ttCus').innerHTML = 'Customer type : ' + 'discount' + ' '+ totalMoneyCus + 'USD' ;
+        }else if (cus=='Silver'){
+            totalMoneyCus= 2;
+            document.getElementById('ttCus').innerHTML = 'Customer type : ' + 'discount' + ' '+ totalMoneyCus + 'USD' ;
+        }else {
+            totalMoneyCus= 0;
+            document.getElementById('ttCus').innerHTML = 'Customer type : ' + 'discount' + ' '+ totalMoneyCus + 'USD' ;
+        }
+
+
+        // tính tổng tiền
+        let totalMoney = ((c * day) - dis-totalMoneyCus-totalMoneyDay)
+        document.getElementById('ttTotal').innerHTML ='Total ' + totalMoney;
+
+        document.getElementsByTagName("form")[0].reset(); // reset lại tất cả các ô input trong form thành rỗng.
+    }
+
+
+    function upData() {
+        document.getElementById('name').value = document.getElementById('infoName').innerText;
+        document.getElementById('typeOfCm').value = document.getElementById('infoTypeOfCm').innerHTML;
+        document.getElementById('so').value = document.getElementById('number').innerText;
+        document.getElementById('DoB').value = document.getElementById('typeDoB').innerText;
+        document.getElementById('address').value = document.getElementById('add').innerText;
+        document.getElementById('email').value = document.getElementById('aemail').innerText;
+        document.getElementById('cus').value = document.getElementById('typecus').innerText;
+        document.getElementById('Dis').value = document.getElementById('typeDis').innerText;
+        document.getElementById('people').value = document.getElementById('typePeople').innerText;
+        document.getElementById('num-day').value = document.getElementById('typeNum-day').innerText;
+        document.getElementById('home').value = document.getElementById('typeHome').innerText;
+        document.getElementById('service').value = document.getElementById('typeService').innerText;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả lớp Temperature</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('nhap do C'));
+        class temperature{
+            constructor() {
+                this.doC = a;
+            }
+            nhietDoC(){
+                return this.doC;
+            }
+            switchF(){
+                return this.doC*33.8;
+            }
+            switchK(){
+                return this.doC*274.15;
+            }
+        }
+
+        let b = new temperature();
+        document.write(b.nhietDoC()+ '</br>');
+        document.write(b.switchF()+ '</br>');
+        document.write(b.switchK());
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>điện thoại</title>
+</head>
+<body>
+    <script>
+        class dienthoai{
+            constructor() {
+                this.pin = 10;
+                this.vungNhoSoanThao = [];
+                this.vungNhoGuiTN = [];
+                this.vungNhoNhanTN = [];
+                this.status = false;
+            }
+            getTrangThai(){
+                return this.status;
+            }
+            getPin(){
+                return this.pin;
+            }
+            batTatDienThoai(){
+                this.status= !this.status;
+            }
+            sacPin(){
+                this.pin = 100;
+            }
+            soanTN(mess){
+                this.vungNhoSoanThao.push(mess);
+            }
+            nhanTN(mess){
+                this.vungNhoNhanTN.push(mess);
+            }
+            guiTN(phone, mess){
+                this.soanTN(mess);
+                this.vungNhoGuiTN = this.vungNhoSoanThao;
+                phone.nhanTN(this.vungNhoGuiTN);
+            }
+            showTNSoanThao(){
+                return this.vungNhoSoanThao;
+            }
+            showTNDaGoi(){
+                return this.vungNhoGuiTN;
+            }
+            showTNDaNhan(){
+                return this.vungNhoNhanTN;
+            }
+        }
+
+        let iphone = new dienthoai();
+        let samsung = new dienthoai();
+        iphone.guiTN(samsung, 'hi samsung');
+        console.log('vung goi '+iphone.vungNhoGuiTN);
+        console.log(samsung.vungNhoNhanTN);
+
+    </script>
+</body>
+</html>

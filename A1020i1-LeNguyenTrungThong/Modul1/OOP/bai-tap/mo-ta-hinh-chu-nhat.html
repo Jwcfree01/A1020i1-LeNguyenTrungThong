@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="ve" width="1000px" height="1000px"></canvas>
+    <script>
+        let a = parseInt(prompt('nhap chieu dai'));
+        let b = parseInt(prompt('nhap chieu rong'));
+        class HCN {
+            constructor() {
+                this.dai = a;
+                this.rong = b;
+            }
+            dai(){
+                return this.dai();
+            }
+            rong(){
+                return this.rong();
+            }
+            tinhDienTich(){
+                return this.dai*this.rong;
+            }
+            tinhChuVi(){
+                return (this.rong+this.dai)*2;
+            }
+        }
+        let hcn1 = new HCN(150,150);
+        console.log(hcn1.tinhChuVi());
+        console.log(hcn1.tinhDienTich());
+
+        let canvas1 = document.getElementById('ve');
+        let context = canvas1.getContext("2d");
+        context.rect(100,100,hcn1.rong, hcn1.dai);
+        context.stroke();
+        context.fillStyle = 'red';
+        context.fill();
+    </script>
+</body>
+</html>

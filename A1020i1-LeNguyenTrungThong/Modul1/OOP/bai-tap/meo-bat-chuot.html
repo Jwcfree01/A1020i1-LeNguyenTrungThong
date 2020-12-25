@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meo Bat Chuot</title>
+</head>
+<body>
+    <script>
+        class rat{
+            constructor(speed) {
+                this.nameRat = 'Jerry';
+                this.weight = 1;
+                this.speed = speed;
+                this.status = true;
+                this.say = 'chit...chit';
+            }
+            setSpeed(speed){
+                this.speed = speed;
+            }
+            getWeight(){
+                return this.weight;
+            }
+            getSpeed(){
+                return this.speed;
+            }
+            ratStatus(){
+                return this.status;
+            }
+            chuotchet(){
+                this.status = !this.status;
+            }
+        }
+
+        class cat{
+            constructor(rat, speedCat) {
+                this.nameCat = 'Tom';
+                this.weightCat = 5;
+                this.speedCat = speedCat;
+                this.sayCat = 'meo...meo';
+                this.batchuot = false;
+                this.rat = rat;
+            }
+            setSpeedCat(speedCat){
+                this.speedCat = speedCat;
+            }
+            getbatchuot(){
+                if (this.speedCat>this.rat.getSpeed()){
+                    return this.batchuot = !this.batchuot;
+                }else {
+                    return this.batchuot;
+                }
+            }
+            batchuot1(){
+                if (this.batchuot){
+                    console.log('meo da bat duoc chuot');
+                }else {
+                    console.log('chuot nhanh qua, meo thua roi');
+                }
+            }
+            anchuot(){
+                if (this.batchuot == true && this.rat.ratStatus()==true){
+                    console.log('meo da an chuot');
+                    console.log('khoi luong meo la: '+(this.rat.getWeight()+this.weightCat));
+                }else {
+                    console.log('chuot chet mat roi, khong an duoc');
+                }
+            }
+        }
+
+        let chuot = new rat();
+        let meo = new cat(chuot);
+
+        chuot.setSpeed(70);
+        meo.setSpeedCat(80)
+        meo.getbatchuot();
+        meo.batchuot1();
+        // chuot.chuotchet();
+        meo.anchuot();
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam-eva</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor() {
+                this.weight = 10;
+            }
+            getWeigh(){
+                return this.weight;
+            }
+            decrease(){
+                this.weight--;
+            }
+            isEmpty(){
+                if (this.weight==0){
+                    console.log('het tao');
+                }else {
+                    console.log('tao con' + this.weight);
+                }
+            }
+        }
+
+        class Human{
+            constructor(name, weightHuman, gender, say) {
+                this.name = name;
+                this.weight= weightHuman;
+                this.gender  = gender;
+                this.say = say;
+            }
+            getName(){
+                return this.name;
+            }
+            getWeightHuman(){
+                return this.weight;
+            }
+            getGender(){
+                return this.gender;
+            }
+            eatApple(apple){
+                if (apple.getWeigh()>0){
+                    apple.decrease();
+                    this.weight++;
+                }
+                return this.weight;
+            }
+            checkApple(apple){
+                if (apple.getWeight() > 0){
+                    console.log("Táo còn " + apple.weight + " đơn vị")
+                }else {
+                    apple.isEmpty();
+                }
+            }
+        }
+        let apple = new Apple();
+        let adam = new Human('adam', 60, 'male', 'abc');
+        let eva = new Human('eva', 50, 'female', 'bcd');
+
+        console.log(adam.name, adam.weight, adam.gender, adam.say)
+        adam.eatApple(apple);
+        console.log(adam.getWeightHuman());
+    </script>
+</body>
+</html>

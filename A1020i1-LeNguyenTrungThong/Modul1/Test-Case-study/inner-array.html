@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inner array</title>
+</head>
+<body>
+<p id="kq"></p>
+<form action="">
+<input type="text" placeholder="name" id="age1">
+<input type="text" placeholder="age" id="age2">
+</form>
+
+<button onclick="addArr()">add</button>
+<button onclick="abc()">display</button>
+<button onclick="edit()">edit</button>
+<script>
+    let arr = [];
+
+    function addArr() {
+        let name = document.getElementById('name').value;
+        let age = document.getElementById('age').value;
+        arr.push([name, age]);
+        document.getElementsByTagName("form")[0].reset();
+    }
+    function hienthi() {
+        let n = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Age</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (i=0; i<arr.length; i++){
+            n+= '<tr>\n' +
+                '        <td>'+(i+1)+'</td>\n' +
+                '        <td>'+arr[i][0]+'</td>\n' +
+                '        <td>'+arr[i][1]+'</td>\n' +
+                '        <td><button onclick="edit('+i+')">Edit</button></td>\n' +
+                '        <td><button onclick="xoa(' +i+')">Delete</button></td>\n' +
+                '    </tr>';
+        }
+        n+= '</table>';
+        document.getElementById('kq').innerHTML = n;
+    }
+
+    function abc() {
+        hienthi();
+    }
+
+    function edit() {
+        for (let i=0; i<arr.length;i++){
+            for (let j=0; j<arr[i].length; j++){
+                document.getElementById('age'+(i+1)).innerHTML =
+            }
+        }
+    }
+</script>
+</body>
+</html>

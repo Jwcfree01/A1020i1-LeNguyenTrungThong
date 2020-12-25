@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn pin</title>
+</head>
+<body>
+<script>
+    class pin {
+        constructor() {
+            this.statusPin = 0;
+        }
+        getStatusPin(){
+            return this.statusPin;
+        }
+        setPin(){
+            this.statusPin++;
+        }
+    }
+
+    class den {
+        constructor(pin) {
+            this.status = false;
+            this.pin = pin;
+        }
+        // test1(){
+        //     return this.pin.getStatusPin();
+        // }
+        getStatusDen(){
+            return this.status;
+        }
+        batTatDen(){
+            if (this.pin.getStatusPin()>0) {
+                this.status = !this.status;
+            }
+
+        }
+    }
+
+    let pin1 = new pin();
+    let den1 = new den(pin1);
+    pin1.setPin();
+    console.log(pin1.getStatusPin());
+    den1.batTatDen();
+    console.log(den1.getStatusDen());
+</script>
+</body>
+</html>

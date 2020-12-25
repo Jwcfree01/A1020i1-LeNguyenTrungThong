@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2-yc6</title>
+</head>
+<body>
+<form action="">
+    <h2>Employee</h2>
+    <input type="text" id="nameEm" placeholder="nhập họ tên nhân viên">
+    <input type="date" id="dOBEm">
+    <input type="text" id="cmEm" placeholder="nhập số cm">
+    <input type="number" id="phone" placeholder="nhập số đt">
+    <input type="email" id="emailEm" placeholder="nhập email">
+    <select name="" id="trinhDo">
+        <option value="DaiHoc">DaiHoc</option>
+        <option value="CaoDang">CaoDang</option>
+        <option value="TrungCap">TrungCap</option>
+    </select>
+    <select name="" id="location">
+        <option value="Manager">Manager</option>
+        <option value="Sale">Sale</option>
+        <option value="Maketing">Maketing</option>
+    </select>
+</form>
+<br><br>
+<button id="submit" onclick="submit()">submit</button>
+<button onclick="listEmployee()"></button>
+<p id="kq"></p>
+<script>
+    let arrEmployee = [];
+
+    class employee{
+        constructor(name, dOB,cm,phone,email,trinhDo,location,luong) {
+            this.name = name;
+            this.dOB = dOB;
+            this.cm = cm;
+            this.phone = phone;
+            this.email = email;
+            this.trinhDo = trinhDo;
+            this.location = location;
+            this.luong = luong;
+        }
+        getLuong(location){
+            if (location=='Manager'){
+                return this.luong=500 + '$';
+            }else if (location=='Sale'){
+                return this.luong=300 + '$';
+            }else if (location=='Maketing'){
+                return this.luong=200 + '$';
+            }
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        getDOB(){
+            return this.dOB;
+        }
+        getCm(){
+            return this.cm;
+        }
+        getPhone(){
+            return this.phone;
+        }
+        getEmail(){
+            return this.email;
+        }
+        getTrinhDo(){
+            return this.trinhDo;
+        }
+        getLocation(){
+            return this.location;
+        }
+    }
+
+    function hienthi() {
+        let n = '<table border="1" style="margin-left: 200px; margin: 0px auto">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Date Of Birth</th>\n' +
+            '        <th>Num Card</th>\n' +
+            '        <th>Phone</th>\n' +
+            '        <th>Email</th>\n' +
+            '        <th>Trinh Do</th>\n' +
+            '        <th>Location</th>\n' +
+            '        <th>Salary</th>\n' +
+            '    </tr>';
+        for (let i=0; i<arrEmployee.length; i++){
+            n += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + arrEmployee[i][0] + '</td>\n' +
+                '        <td>' + arrEmployee[i][1] + '</td>\n' +
+                '        <td>' + arrEmployee[i][2] + '</td>\n' +
+                '        <td>' + arrEmployee[i][3] + '</td>\n' +
+                '        <td>' + arrEmployee[i][4] + '</td>\n' +
+                '        <td>' + arrEmployee[i][5] + '</td>\n' +
+                '        <td>' + arrEmployee[i][6] + '</td>\n' +
+                '        <td>' + arrEmployee[i][7] + '</td>\n' +
+                '        <td><button onclick="xoa(' + i + ')">Delete</button></td>\n' +
+                '    </tr>';
+        }
+        n+= '</table>';
+        document.getElementById('kq').innerHTML = n;
+    }
+    //
+    // let em1 = new employee();
+    // em1.setName(document.getElementById('nameEm').value);
+    // console.log(em1.getName());
+
+
+    function submit() {
+        // let name = document.getElementById('nameEm').value;
+        let dOB = document.getElementById('dOBEm').value;
+        let cm = document.getElementById('cmEm').value;
+        let phone = document.getElementById('phone').value;
+        let email = document.getElementById('emailEm').value;
+        let trinhDo = document.getElementById('trinhDo').value;
+        let location = document.getElementById('location').value;
+        let nv1 = new employee(name, dOB, cm, phone, email, trinhDo, location);
+        let luong= nv1.getLuong(location);
+        console.log(luong);
+        arrEmployee.push([name, dOB, cm, phone, email, trinhDo, location,luong]);
+        console.log(arrEmployee);
+    }
+    function listEmployee() {
+        hienthi(arrEmployee.sort());
+
+    }
+</script>
+</body>
+</html>
