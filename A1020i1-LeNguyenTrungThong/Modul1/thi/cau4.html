@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 4</title>
+</head>
+<body>
+<p id="kq"></p>
+<button onclick="themMoi()">Add</button>
+    <script>
+        let arr = [];
+        function hienthi() {
+            let n = '<table border="1">\n' +
+                '    <tr>\n' +
+                '        <th>ID</th>\n' +
+                '        <th>Name</th>\n' +
+                '        <th>Phone</th>\n' +
+                '        <th>Address</th>\n' +
+                '        <th>Email</th>\n' +
+                '    </tr>';
+            for (i=0; i<arr.length; i++){
+                n+= '<tr>\n' +
+                    '        <td>'+arr[i].getId()+'</td>\n' +
+                    '        <td>'+arr[i].getName()+'</td>\n' +
+                    '        <td>'+arr[i].getPhone()+'</td>\n' +
+                    '        <td>'+arr[i].getAddress()+'</td>\n' +
+                    '        <td>'+arr[i].getEmail()+'</td>\n' +
+                    '    </tr>';
+            }
+            n+= '</table>';
+            document.getElementById('kq').innerHTML = n;
+        }
+        hienthi();
+
+        class Customer{
+            constructor(id, name, phone, address, email) {
+                this.id = id;
+                this.name = name;
+                this.phone = phone;
+                this.address = address;
+                this.email = email;
+            }
+            getId(){
+                return this.id;
+            }
+            getName(){
+                return this.name
+            }
+            getPhone(){
+                return this.phone;
+            }
+            getAddress(){
+                return this.address;
+            }
+            getEmail(){
+                return this.email;
+            }
+        }
+
+        function themMoi(){
+            let id = parseInt(prompt('nhap id'));
+            let name = prompt('nhap ten');
+            let phone = prompt('nhap so dien thoai');
+            let address = prompt('nhap dia chi');
+            let email = prompt('nhap email');
+            let customer2 = new customer(id, name, phone, address, email);
+            arr.push(customer2);
+            console.log(arr);
+            hienthi(arr);
+        }
+    </script>
+</body>
+</html>

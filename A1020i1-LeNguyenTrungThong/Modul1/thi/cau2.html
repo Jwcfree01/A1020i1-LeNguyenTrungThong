@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu2</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('nhap diem'));
+    let diemLamTron=0;
+
+    let arr = [];
+    for (let i=0; i<=100; i++){
+        if (i%5==0){
+            arr.push(i);
+        }
+    }
+
+    if (0<=a<=100) {
+        if (a < 50) {
+            alert('ban da thi truot');
+        } else {
+            for (let i = 0; i <= 100; i++) {
+                if (arr[i] >= a) {
+                    if (arr[i] - a < 3) {
+                        diemLamTron = arr[i];
+                    } else {
+                        diemLamTron = a;
+                    }
+                    document.write(diemLamTron);
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
