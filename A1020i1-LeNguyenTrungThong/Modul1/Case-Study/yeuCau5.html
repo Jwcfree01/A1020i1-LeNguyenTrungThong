@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Case5</title>
 </head>
 <body>
 <script>
@@ -34,7 +34,7 @@
                     break;
                 }
                 case 5: {
-                    break;
+                    return;
                 }
                 default:
                     alert("false");
@@ -55,7 +55,7 @@
         let quantityIncluded = prompt("Input Quantity Included: ");
         let rendDays = prompt("Input rendDays: ");
         arrListCustomer.push([name,cmnd,birthday,email,address,typeService,typeCustomer,typeRoom,discount,quantityIncluded,rendDays]);
-        alert("Bạn đã thêm thành công");
+        alert("Bạn đã thêm customer thành công");
         displayMainMenu();
     }
     function displayCustomer() {
@@ -145,7 +145,7 @@
                 alert("Failed!!!");
                 break;
         }
-        editCustomer();
+        displayCustomer();
     }
     function deleteCustomer() {
         let temp = "";

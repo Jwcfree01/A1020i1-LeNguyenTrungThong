@@ -5,10 +5,11 @@
     <title>check mail</title>
 </head>
 <body>
-<input type="email" id="email" placeholder="nhaapj email">
-<button onclick="checkmail()">check</button>
+<input type="email" id="email" onchange="checkmail()" placeholder="nhaapj email">
+<!--<button onclick="checkmail()">check</button>-->
 <script>
     function checkmail() {
+        let email = document.getElementById('email').value;
             let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if (!filter.test(email.value)) {
                 alert('Địa chỉ email không hợp lệ');

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số ngày trong tháng</title>
+</head>
+<body>
+<script>
+    // năm nhuận là năm chia hết cho 4 mà không chia hết cho 100 hoặc chia hết cho 400
+    let month = parseInt(prompt('nhập vào tháng cần tìm: '));
+    let year = parseInt(prompt('nhập vào năm cần tìm'));
+    let leapYear = false;
+    if (year%4==0 && year%100!=0 || year%400 ==0){
+        leapYear = true;
+    }
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert(31);
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert(30);
+            break;
+        case 2:
+            if (leapYear){
+                alert(29);
+            }else {
+                alert(28);
+            }
+    }
+</script>
+</body>
+</html>
