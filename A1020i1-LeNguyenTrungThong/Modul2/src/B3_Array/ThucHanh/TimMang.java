@@ -16,6 +16,7 @@ public class TimMang {
             arr[i] = scanner.nextLine();
         }
 
+        char n = (char) scanner.nextLine().charAt(0);
         System.out.println("nhap ten ban muon tim");
         String name = scanner.nextLine();
         int viTri=0;

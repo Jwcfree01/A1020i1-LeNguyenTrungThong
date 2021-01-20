@@ -10,7 +10,7 @@ public class DemKiTuChuoi {
         String a = scanner.nextLine();
 
         System.out.println("Enter the characters want to search");
-        char b = 'e';
+        char b = scanner.nextLine().charAt(0);
         int count=0;
         for (int i=0; i<a.length(); i++){
             if (a.charAt(i)==b){

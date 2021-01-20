@@ -1,9 +1,13 @@
 package B4_OOP.BaiTap;
 
-public class PhuongTrnhBachai {
-    double a, b, c;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
-    public PhuongTrnhBachai(double a, double b, double c) {
+import java.util.Scanner;
+
+public class PhuongTrnhBachai {
+    private double a, b, c;
+
+    private PhuongTrnhBachai(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -13,17 +17,24 @@ public class PhuongTrnhBachai {
         return (b*b)-4*a*c;
     }
 
+    public double a(){
+        return a;
+    }
+
+    public double b(){
+        return b;
+    }
+
+    public double c(){
+        return c;
+    }
+
+    public void n1(){
+
+    }
+
     public static void main(String[] args) {
         PhuongTrnhBachai pt = new PhuongTrnhBachai(1,3,1);
-        double m = pt.delta();
-
-        if (m>0) {
-            System.out.println((-pt.b + Math.sqrt(m)) / 2 * pt.a);
-            System.out.println((-pt.b - Math.sqrt(m)) / 2 * pt.a);
-        }else if (m==0){
-            System.out.println(-pt.b/2*pt.a);
-        }else{
-            System.out.println("pt vo nghiem");
-        }
+        pt.n1();
     }
 }
