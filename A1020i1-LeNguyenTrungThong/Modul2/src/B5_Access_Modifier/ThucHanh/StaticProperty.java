@@ -16,7 +16,7 @@ public class StaticProperty {
     }
 
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         StaticProperty car1 = new StaticProperty("mazda", "blue");
         car1.display();
         StaticProperty car2 = new StaticProperty("toyota", "red");
