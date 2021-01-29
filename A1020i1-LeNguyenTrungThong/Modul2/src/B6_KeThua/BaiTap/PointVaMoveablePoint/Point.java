@@ -1,8 +1,8 @@
 package B6_KeThua.BaiTap.PointVaMoveablePoint;
 
 public class Point {
-    private float x = 0.0f;
-    private float y = 0.0f;
+    protected float x = 0.0f;
+    protected float y = 0.0f;
 
     public Point(float x, float y) {
         this.x = x;
