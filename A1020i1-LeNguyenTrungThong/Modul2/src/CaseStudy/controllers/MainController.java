@@ -50,7 +50,19 @@ public class MainController {
             num = scan.nextInt();
             switch (num) {
                 case 1:
-
+                    System.out.println("1. Add New Villa" + "\n" +
+                            "2. Add New House" + "\n" +
+                            "3. Add New Room" + "\n" +
+                            "4. Back to menu" + "\n" +
+                            "5. Exit" + "\n");
+                    int num1 = scan.nextInt();
+                    switch (num1){
+                        case 1:
+                            System.out.println("Add new service of Villa");
+                            break;
+                        case 2:
+                            
+                    }
                     break;
                 case 2:
                     System.out.println("hien thi");
