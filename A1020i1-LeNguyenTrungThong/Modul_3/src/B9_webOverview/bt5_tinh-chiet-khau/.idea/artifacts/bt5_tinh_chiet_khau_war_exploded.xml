@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bt5_tinh-chiet-khau:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/bt5_tinh_chiet_khau_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="bt5_tinh-chiet-khau/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bt5_tinh-chiet-khau" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
