@@ -18,7 +18,9 @@
                 <td><c:out value="${customer.name}"/></td>
                 <td><c:out value="${customer.dateOfBirth}"/></td>
                 <td><c:out value="${customer.address}"/></td>
-                <td><c:out value="${customer.img}"/></td>
+                <td>
+                    <img src="../web/image/avatar.jpg">
+                </td>
             </tr>
         </c:forEach>
     </table>

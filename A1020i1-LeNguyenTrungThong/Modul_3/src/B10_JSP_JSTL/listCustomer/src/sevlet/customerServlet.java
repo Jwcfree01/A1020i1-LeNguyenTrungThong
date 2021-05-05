@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "customerServlet", urlPatterns = {"/", "/customer"})
+@WebServlet(name = "customerServlet", urlPatterns ="/abc")
 public class customerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -20,10 +20,10 @@ public class customerServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List <customer> customerList = new ArrayList<>();
 
-        customerList.add(new customer("thong", "12-12-2012", "quang nam", "123"));
-        customerList.add(new customer("thong1", "13-12-2012", "quang nam1", "1234"));
-        customerList.add(new customer("thong2", "14-12-2012", "quang nam2", "12345"));
-        customerList.add(new customer("thong3", "15-12-2012", "quang nam3", "12356"));
+        customerList.add(new customer("thong", "12-12-2012", "quang nam", "../web/image/avatar.jpg"));
+        customerList.add(new customer("thong1", "13-12-2012", "quang nam1", "../web/image/avatar.jpg"));
+        customerList.add(new customer("thong2", "14-12-2012", "quang nam2", "../web/image/avatar.jpg"));
+        customerList.add(new customer("thong3", "15-12-2012", "quang nam3", "../web/image/avatar.jpg"));
 
         request.setAttribute("list1", customerList);
         request.getRequestDispatcher("display.jsp").forward(request, response);
