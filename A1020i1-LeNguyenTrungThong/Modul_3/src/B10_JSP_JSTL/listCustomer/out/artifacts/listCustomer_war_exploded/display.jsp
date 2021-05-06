@@ -19,7 +19,7 @@
                 <td><c:out value="${customer.dateOfBirth}"/></td>
                 <td><c:out value="${customer.address}"/></td>
                 <td>
-                    <img src="../web/image/avatar.jpg">
+                    <img src="${customer.img}" style="max-width: 50px; max-height: 50px">
                 </td>
             </tr>
         </c:forEach>
