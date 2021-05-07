@@ -1,17 +1,17 @@
 public class calculator {
-    public static float Calculator (float a, float b, char n) throws Exception {
-        switch (n){
+    public static double Calculator(double a, double b, char n){
+        switch (n) {
             case '+':
-                return  a + b;
+                return a + b;
             case '-':
-                return a-b;
+                return (a - b);
             case '*':
-                return a*b;
+                return (a * b);
             case '/':
-                if (b !=0) {
-                    return a / b;
-                }else {
-                    throw new RuntimeException("err");
+                if (b != 0) {
+                    return (a / b);
+                } else {
+                    throw new RuntimeException("loi chia cho 0");
                 }
             default:
                 throw new RuntimeException("Invalid");

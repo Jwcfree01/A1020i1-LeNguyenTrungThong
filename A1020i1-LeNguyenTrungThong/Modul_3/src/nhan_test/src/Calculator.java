@@ -3,6 +3,7 @@ public class Calculator {
         switch (operator){
             case '+':
                 return firstOperand + secondOperand ;
+                break;
             case '-':
                 return firstOperand - secondOperand;
             case '*':

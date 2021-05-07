@@ -8,16 +8,15 @@ import java.io.IOException;
 @WebServlet(name = "calculatorServlet", urlPatterns = "/abc")
 public class calculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int a = Integer.parseInt(request.getParameter("input1"));
-        int b = Integer.parseInt(request.getParameter("input1"));
+        double a = Double.parseDouble(request.getParameter("input1"));
+        double b = Double.parseDouble(request.getParameter("input2"));
         char n = request.getParameter("n").charAt(0);
-        float result = calculator.Calculator(a,b,n);
 
-            request.setAttribute("a", a);
-            request.setAttribute("b", b);
-            request.setAttribute("n", n);
-        request.setAttribute("results", result);
-        request.getRequestDispatcher("result.jsp").forward(request, response);
+        Double result = calculator.Calculator(a,b,n);
+
+        request.setAttribute("result",result);
+        request.getRequestDispatcher("result.jsp").forward(request,response);
+
     }
 
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

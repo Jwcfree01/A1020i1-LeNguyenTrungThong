@@ -6,6 +6,6 @@
 </head>
 <body>
     <h2>Result</h2>
-    <h5><c:out value="${results}"/></h5>
+    <h5><c:out value="${result}"/></h5>
 </body>
 </html>

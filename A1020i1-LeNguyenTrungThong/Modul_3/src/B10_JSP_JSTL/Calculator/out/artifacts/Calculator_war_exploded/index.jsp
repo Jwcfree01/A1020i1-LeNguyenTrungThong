@@ -10,10 +10,10 @@
       <legend>Calculator:</legend>
       <input type="text" placeholder="input number" name="input1">
       <select name="n" id="">
-        <option value="cong">+</option>
-        <option value="tru">-</option>
-        <option value="nhan">*</option>
-        <option value="chia">/</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
       </select>
       <input type="text" placeholder="input number" name="input2">
       <input type="submit" value="Submit">
