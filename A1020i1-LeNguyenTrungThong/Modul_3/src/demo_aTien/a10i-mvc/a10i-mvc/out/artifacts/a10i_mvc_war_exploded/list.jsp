@@ -11,6 +11,7 @@
     <%
         List<Student> studentListJSP = (List<Student>) request.getAttribute("studentListServlet");
     %>
+
     <table>
         <tr>
             <th>No</th>

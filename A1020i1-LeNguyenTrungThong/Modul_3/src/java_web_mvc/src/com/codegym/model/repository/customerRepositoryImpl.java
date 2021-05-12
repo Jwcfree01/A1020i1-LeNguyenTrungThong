@@ -1,9 +1,6 @@
 package com.codegym.model.repository;
 
 import com.codegym.model.bean.customer;
-import com.codegym.service.customerService;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

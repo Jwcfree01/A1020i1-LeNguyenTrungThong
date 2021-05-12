@@ -5,10 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-
-<a href="/customer?actionUser=create">Create customer</a>
-
 <h2>List customer</h2>
+<a href="customer?action=create">Create customer</a>
 <table border="1px">
     <tr>
         <th>id</th>

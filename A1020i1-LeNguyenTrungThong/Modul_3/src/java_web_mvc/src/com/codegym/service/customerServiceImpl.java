@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.codegym.model.repository.customerRepository;
+import com.codegym.model.repository.customerRepositoryImpl;
+
 public class customerServiceImpl implements customerService {
 
-//private CustomerRepository customerRepository = new customerServiceImpl();
+    private customerRepository CustomerRepository = new customerRepositoryImpl();
+
 private static Map<Integer, customer> Customers;
 
     static {
@@ -22,14 +26,19 @@ private static Map<Integer, customer> Customers;
         Customers.put(6, new customer(6, "Rose", "rose@codegym.vn", "Newyork"));
     }
 
+
+
     @Override
     public List<customer> findAll() {
         return new ArrayList<>(Customers.values());
     }
 
     @Override
-    public void save(customer Customer) {
-
+    public boolean save(customer Customer) {
+        if (Customer.getName().matches("[A-Za-z ]+")) {
+            return this.CustomerRepository.save(Customer);
+        }
+        return false;
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.util.List;
 public interface customerService {
     List<customer> findAll();
 
-    void save(customer Customer);
+    boolean save(customer Customer);
 
     customer findById(int id);
 
