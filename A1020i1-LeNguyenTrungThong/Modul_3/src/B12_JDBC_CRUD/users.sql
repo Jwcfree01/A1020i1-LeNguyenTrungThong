@@ -13,3 +13,11 @@ insert into user values
 (1, 'thong', 'letrungthong@gmail.com', 'Quang Nam'),
 (2, 'thuan', 'thuan@gmail.com', 'Da Nang'),
 (3, 'Dat', 'dat@gmail.com', 'Hue');
+
+select * from user
+where `name` Like '%th%'
+
+
+
+
+

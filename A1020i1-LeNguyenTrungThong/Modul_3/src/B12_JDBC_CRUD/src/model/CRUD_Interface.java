@@ -9,4 +9,6 @@ public interface CRUD_Interface {
     boolean addUser(User user);
     void editUser(User user);
     void deleteUser(int id);
+    User findId(int id);
+    User search(String search);
 }

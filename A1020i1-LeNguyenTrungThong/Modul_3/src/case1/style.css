@@ -1,0 +1,23 @@
+/*home*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    float: left;
+    padding-left: 7%;
+}
+
+.fullName{
+    float: right;
+    padding-right: 20%;
+}
+
+.menu{
+    position: static;
+    /*display: block;*/
+    display: flex;
+}
+
+/*add new customer*/
