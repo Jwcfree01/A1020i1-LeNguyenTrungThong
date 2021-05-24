@@ -6,13 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class UserRepositoryImpl implements UserRepository{
-    private static Map<Integer, User> userMap = new TreeMap<>();
+//    private static Map<Integer, User> userMap = new TreeMap<>();
 //    static {
 //        userMap.put(1,  new User(1,"a", "iphone1", "qa"));
 //        userMap.put(2,  new User(2, "a", "iphone2", "qa"));
@@ -27,7 +24,7 @@ public class UserRepositoryImpl implements UserRepository{
         try {
             Statement statement = this.baseRepository.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery("select id, `name`, email, country\n" +
-                    "from user");
+                    "from user order by `name`");
             User user = null;
             while (resultSet.next()){
                 user = new User();
@@ -84,13 +81,13 @@ public class UserRepositoryImpl implements UserRepository{
         try {
             PreparedStatement preparedStatement = this.baseRepository.getConnection().prepareStatement
                     ("delete from user\n" +
-                    "where id=?");
+                    "where id = ?");
             preparedStatement.setInt(1,id);
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        userMap.remove(id);
+//        userMap.remove(id);
     }
 
     @Override

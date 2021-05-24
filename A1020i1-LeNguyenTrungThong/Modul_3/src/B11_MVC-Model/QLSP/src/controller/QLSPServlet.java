@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "QLSPServlet", urlPatterns = "")
 public class QLSPServlet extends HttpServlet {
@@ -53,6 +54,10 @@ public class QLSPServlet extends HttpServlet {
                 loadList(request,response);
             case "view":
                 showView(request,response);
+                break;
+            case "find":
+                findProduct(request,response);
+                break;
             default:
                 loadList(request,response);
                 break;
@@ -121,6 +126,18 @@ public class QLSPServlet extends HttpServlet {
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void findProduct(HttpServletRequest request, HttpServletResponse response) {
+        String keyword = request.getParameter("keyword");
+        System.out.println(keyword);
+        List<Product> productList = this.productService.searchByKeyword(keyword);
+        request.setAttribute("showPro", productList);
+        try {
+            request.getRequestDispatcher("list.jsp").forward(request, response);
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }

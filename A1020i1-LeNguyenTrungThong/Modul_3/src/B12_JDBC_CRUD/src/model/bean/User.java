@@ -1,10 +1,10 @@
 package model.bean;
 
 public class User {
-    int id;
-    String name;
-    String email;
-    String country;
+    private int id;
+    private String name;
+    private String email;
+    private String country;
 
     public User() {
     }

@@ -14,12 +14,13 @@
     function kg() {
         let a = parseInt(document.getElementById('cao').value);
         let b = parseInt(document.getElementById('nang').value);
-        let c = b*a/2;
-        if (c<18.5){
+        let c = b/(a*2);
+        console.log(c);
+        if (c<18){
             document.getElementById('hienthi').innerHTML = "UnderWeight";
-        }else if (18.5<=c<25){
+        }else if (c<25){
             document.getElementById('hienthi').innerHTML = 'Nomal';
-        }else if (25<=c<30) {
+        }else if (c<30) {
             document.getElementById('hienthi').innerHTML = 'Overweight';
         } else {
             document.getElementById('hienthi').innerHTML = 'Obese';

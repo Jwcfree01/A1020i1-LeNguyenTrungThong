@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MySql_Stored_Procedures:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MySql_Stored_Procedures_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MySql_Stored_Procedures/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MySql_Stored_Procedures" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.25" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+<form >
+    <p>
+        Find Product by Name:
+        <input type="hidden" name="action" value="find" />
+        <input type="text" name="keyword" placeholder="input name product" width="50px" >
+        <input type="submit" value="Find" >
+    </p>
+</form>
+<%--bên m có cái action ni k á, thấy form m gởi qua k có á--%>
     <h2>List Product</h2>
     <a href="/?action=create">Create product</a>
     <table border="1px solid">

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c9edb45-01b0-4c8e-9b55-cdcd8f04bce6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/CRUD_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/src/model/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/web/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/web/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/web/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../B13_JDBC_Querying&amp;Transaction/MySql_Stored_Procedures/web/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/config/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/CRUDInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/bean/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/repository/CustomerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/java/model/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/resources/style/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/customer/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/customer/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/employee/createEmployee.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../abc/src/main/webapp/service/createService.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study/web/Service/createService.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modul_1/cau-truc-dieu-kien-2/bai-tap/can-nang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modul_1/cau-truc-dieu-kien-2/bai-tap/can-nang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modul_2/src/B2_Array_Loop/BaiTap/SoNguyenTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modul_2/src/B2_Array_Loop/BaiTap/SoNguyenTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/controller/QLSPServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/controller/QLSPServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/bean/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/bean/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/repository/CRUDInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/repository/CRUDInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/repository/ProductRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/WEB-INF/classes/model/service/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/artifacts/QLSP_war_exploded/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/controller/QLSPServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/controller/QLSPServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/bean/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/bean/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/repository/CRUDInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/repository/CRUDInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/repository/ProductRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/out/production/QLSP/model/service/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/controller/QLSPServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/controller/QLSPServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/bean/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/bean/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/repository/CRUDInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/repository/CRUDInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/repository/ProductRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/src/model/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/web/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../B11_MVC-Model/QLSP/web/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B12_JDBC_CRUD/src/model/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B12_JDBC_CRUD/src/model/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../B12_JDBC_CRUD/src/model/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../B12_JDBC_CRUD/src/model/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/db/dbCus.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/db/dbCus.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/Controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/src/Controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/web/Customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/web/Customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/web/Customer/createService.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/web/Customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/web/Customer/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/web/Customer/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/web/Customer/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vu.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1sz9JBM8aInMfzipEiQn01ColiK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c9edb45-01b0-4c8e-9b55-cdcd8f04bce6" name="Default Changelist" comment="" />
+      <created>1621864476364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621864476364</updated>
+      <workItem from="1621864477996" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

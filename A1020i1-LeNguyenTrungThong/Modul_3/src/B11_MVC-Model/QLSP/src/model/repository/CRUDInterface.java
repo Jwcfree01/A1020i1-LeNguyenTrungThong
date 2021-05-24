@@ -12,4 +12,5 @@ public interface CRUDInterface {
     void viewProduct(int id);
     void searchProduct(String name);
     Product findById(int id);
+    List<Product> searchByKeyword(String keyword);
 }

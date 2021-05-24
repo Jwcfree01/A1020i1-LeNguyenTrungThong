@@ -49,10 +49,14 @@ public class CustomerServlet extends HttpServlet {
             case "edit":
                 showFormEdit(request,response);
                 break;
+            case "createService":
+                response.sendRedirect("Customer/createService.jsp");
             default:
                 loadList(request,response);
                 break;
         }
+
+        request.setCharacterEncoding("utf-8");
     }
 
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {

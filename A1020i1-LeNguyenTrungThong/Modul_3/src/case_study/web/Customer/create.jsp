@@ -14,44 +14,63 @@
 </div>
 
 <div class="container-fluid">
-    <div class="container-fluid">
+    <div class="row">
         <!--menu_left-->
-        <div class="col-md-3">
+        <div class="col-md-2">
             <p>item one</p>
             <p>item two</p>
             <p>item three</p>
         </div>
         <!--body-->
-        <div class="col-md-9">
-            <div class="container">
+        <div class="col-md-10">
+            <legend style="text-align: center">CREATE USER</legend>
+            <form action="/?action=create" method="post" style="margin-top: 7%">
                 <div class="row" style="justify-content: center">
-                    <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4">
-                        <legend>CREATE USER</legend>
-                        <form action="/?action=create" method="post" class="form">
-                            <select class="form-select" aria-label="Default select example" name="cus_type">
-                                <option value="5">Member</option>
-                                <option value="4">Silver</option>
-                                <option value="3">Gold</option>
-                                <option value="2">Platinum</option>
-                                <option value="1">Diamond</option>
-                            </select>
-                            <input class="form-control" name="name" placeholder="Name" style="margin-top: 5%">
-                            <input class="form-control" name="birthday" type="date" style="margin-top: 5%">
-                            <input class="form-control" name="gender" placeholder="Gender" style="margin-top: 5%">
-                            <input class="form-control" name="cmnd" placeholder="Id card" style="margin-top: 5%">
-                            <input class="form-control" name="phone" placeholder="Phone Number" style="margin-top: 5%">
-                            <input class="form-control" name="email" placeholder="Email" style="margin-top: 5%">
-                            <input class="form-control" name="address" placeholder="Address" style="margin-top: 5%">
-                            <br>
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">Create Customer</button>
-                        </form>
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <select class="form-select" aria-label="Default select example" name="cus_type">
+                            <option value="5">Member</option>
+                            <option value="4">Silver</option>
+                            <option value="3">Gold</option>
+                            <option value="2">Platinum</option>
+                            <option value="1">Diamond</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="name" placeholder="Name">
                     </div>
                 </div>
-            </div>
+                <div class="row mt-4" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <input class="form-control" name="birthday" type="date">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="gender" placeholder="Gender">
+                    </div>
+                </div>
+                <div class="row mt-4" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <input class="form-control" name="cmnd" placeholder="Id card">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="phone" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="row mt-4" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <input class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="address" placeholder="Address">
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-lg btn-primary btn-block" style="float:right; margin-right: 16%" type="submit">
+                    Create Customer
+                </button>
+            </form>
         </div>
     </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

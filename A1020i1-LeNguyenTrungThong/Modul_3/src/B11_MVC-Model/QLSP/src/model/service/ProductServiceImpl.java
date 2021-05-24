@@ -44,4 +44,9 @@ public class ProductServiceImpl implements ProductService {
     public Product findById(int id) {
         return this.productRepository.findById(id);
     }
+
+    @Override
+    public List<Product> searchByKeyword(String keyword) {
+        return productRepository.searchByKeyword(keyword);
+    }
 }

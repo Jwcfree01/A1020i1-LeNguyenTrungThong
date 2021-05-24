@@ -2,10 +2,12 @@ package model.repository;
 
 import model.bean.Product;
 
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class ProductRepositoryImpl implements ProductRepository {
     private static Map<Integer, Product> productMap = new TreeMap<>();
@@ -45,11 +47,18 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public void searchProduct(String name) {
+
         productMap.get(name);
     }
 
     @Override
     public Product findById(int id) {
         return productMap.get(id);
+    }
+
+    @Override
+    public List<Product> searchByKeyword(String keyword) {
+        return productMap.values().stream().filter(cus -> cus.getName().toLowerCase()
+                .contains(keyword.toLowerCase())).collect(Collectors.toList());
     }
 }

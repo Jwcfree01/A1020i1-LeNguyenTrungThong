@@ -12,27 +12,60 @@
     <jsp:include page="header.jsp"/>
 </div>
 
-<div class="container">
-    <div class="row" style="justify-content: center">
-        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4">
-            <legend>EDIT CUSTOMER</legend>
-            <form action="/?edit" method="post" class="form">
-                <select class="form-select" aria-label="Default select example" name="cus_type" value="${customer.cusTypeId}">
-                    <option value="5">Member</option>
-                    <option value="4">Silver</option>
-                    <option value="3">Gold</option>
-                    <option value="2">Platinum</option>
-                    <option value="1">Diamond</option>
-                </select>
-                <input class="form-control" name="name" placeholder="Name" value="${customer.cusName}" style="margin-top: 5%">
-                <input class="form-control" name="birthday" type="date" value="${customer.cusBirthDay}" style="margin-top: 5%">
-                <input class="form-control" name="gender" placeholder="Gender" value="${customer.cusGender}" style="margin-top: 5%">
-                <input class="form-control" name="cmnd" placeholder="Id card" value="${customer.cusIdCard}" style="margin-top: 5%">
-                <input class="form-control" name="phone" placeholder="Phone Number" value="${customer.cusPhone}" style="margin-top: 5%">
-                <input class="form-control" name="email" placeholder="Email" value="${customer.cusEmail}" style="margin-top: 5%">
-                <input class="form-control" name="address" placeholder="Address" value="${customer.cusAddress}" style="margin-top: 5%">
+<div class="container-fluid">
+    <div class="row">
+        <!--menu_left-->
+        <div class="col-md-2">
+            <p>item one</p>
+            <p>item two</p>
+            <p>item three</p>
+        </div>
+        <!--body-->
+        <div class="col-md-10">
+            <legend style="text-align: center">EDIT CUSTOMER</legend>
+            <form action="/?action=edit" method="post" style="margin-top: 7%">
+                <div class="row" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <select class="form-select" aria-label="Default select example" name="cus_type" value="${customer.cusTypeId}">
+                            <option value="5">Member</option>
+                            <option value="4">Silver</option>
+                            <option value="3">Gold</option>
+                            <option value="2">Platinum</option>
+                            <option value="1">Diamond</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="name" placeholder="Name" value="${customer.cusName}">
+                    </div>
+                </div>
+                <div class="row mt-4" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <input class="form-control" name="birthday" type="date" value="${customer.cusBirthDay}">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="gender" placeholder="Gender" value="${customer.cusGender}">
+                    </div>
+                </div>
+                <div class="row mt-4" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <input class="form-control" name="cmnd" placeholder="Id card" value="${customer.cusIdCard}">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="phone" placeholder="Phone Number" value="${customer.cusPhone}">
+                    </div>
+                </div>
+                <div class="row mt-4" style="justify-content: center">
+                    <div class="col-md-4" style="margin-right: 3%">
+                        <input class="form-control" name="email" placeholder="Email" value="${customer.cusEmail}">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="address" placeholder="Address" value="${customer.cusAddress}">
+                    </div>
+                </div>
                 <br>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+                <button class="btn btn-lg btn-primary btn-block" style="float:right; margin-right: 16%" type="submit">
+                    Create Customer
+                </button>
             </form>
         </div>
     </div>
