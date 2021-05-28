@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASON</title>
+    <style>
+        body{
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+<button onclick="play()">Play</button>
+<h2 id="kq"></h2>
+<h2 id="kq1"></h2>
+<h2 id="kq2"></h2>
+
+
+<script>
+    function play() {
+        document.getElementById('kq').innerHTML = '<input type="text" placeholder="start" id="start">';
+        document.getElementById('kq1').innerHTML = '<input type="text" placeholder="end" id="end">';
+        document.getElementById('kq2').innerHTML = '<button onclick="starts()">Start</button>';
+    }
+
+    function TaoSoNgauNhien(min, max){
+        return Math.floor(Math.random() * (max - min));
+    }
+
+    function starts() {
+        let a = document.getElementById("start").value;
+        let b = document.getElementById("end").value;
+        console.log(a);
+        console.log(b);
+        let person = prompt("Please enter number");
+        console.log(person);
+        let n = TaoSoNgauNhien(a,b);
+        console.log(n);
+        if (person == n){
+            alert("ok");
+        }else if (person<n){
+            alert("<");
+        }else{
+            alert(">");
+        }
+    }
+</script>
+</body>
+</html>

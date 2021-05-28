@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Service</title>
+    <link type="text/css" rel="stylesheet" href="../style/style.css"/>
+    <title>Contract</title>
 </head>
 <body>
 <div>
@@ -23,69 +24,49 @@
         </div>
         <!--body-->
         <div class="col-md-10">
-            <legend style="text-align: center">CREATE SERVICE</legend>
-            <form action="/?action=createService" method="post" style="margin-top: 5%">
+            <legend style="text-align: center">CREATE CONTRACT</legend>
+            <form action="/?action=createContract" method="post" style="margin-top: 5%">
                 <div class="row" style="justify-content: center">
                     <div class="col-md-4" style="margin-right: 3%">
-                        <input class="form-control" name="serviceName" placeholder="Service Name"
-                               style="margin-top: 4%">
+                        <input class="form-control" name="startDate" placeholder="Start Date"
+                               style="margin-top: 3%">
                     </div>
                     <div class="col-md-4">
-                        <input class="form-control" name="serviceArea" placeholder="Service Area"
-                               style="margin-top: 4%">
+                        <input class="form-control" name="enđate" type="date" placeholder="End Date"
+                               style="margin-top: 3%">
                     </div>
                 </div>
                 <div class="row mt-4" style="justify-content: center">
                     <div class="col-md-4" style="margin-right: 3%">
-                        <input class="form-control" name="serviceCost" placeholder="Service Cost"
-                               style="margin-top: 4%">
+                        <input class="form-control" name="deposit" placeholder="Deposit"
+                               style="margin-top: 3%">
                     </div>
                     <div class="col-md-4">
-                        <input class="form-control" name="serviceMaxPeople" placeholder="Service Max People"
-                               style="margin-top: 4%">
+                        <input class="form-control" name="totalMonney" placeholder="Total Monney"
+                               style="margin-top: 3%">
                     </div>
                 </div>
                 <div class="row mt-4" style="justify-content: center">
                     <div class="col-md-4" style="margin-right: 3%">
-                        <select class="form-select" aria-label="Default select example" name="rentTypeName"
-                                style="margin-top: 4%">
-                            <option value="4">House</option>
-                            <option value="3">Day</option>
-                            <option value="2">Month</option>
-                            <option value="1">Year</option>
-                        </select>
+                        <input class="form-control" name="nameEmployee" placeholder="Name Employee"
+                               style="margin-top: 3%">
                     </div>
                     <div class="col-md-4">
-                        <select class="form-select" aria-label="Default select example" name="serviceTypeName"
-                                style="margin-top: 4%">
-                            <option value="1">Villa</option>
-                            <option value="2">House</option>
-                            <option value="3">Room</option>
-                        </select>
+                        <input class="form-control" name="nameCustomer" placeholder="Name Customer"
+                               style="margin-top: 3%">
                     </div>
                 </div>
                 <div class="row mt-4" style="justify-content: center">
                     <div class="col-md-4" style="margin-right: 3%">
-                        <input class="form-control" name="standardRoom" placeholder="Standard Room"
-                               style="margin-top: 4%">
+                        <input class="form-control" name="nameService" placeholder="Name Service"
+                               style="margin-top: 3%">
                     </div>
                     <div class="col-md-4">
-                        <input class="form-control" name="descriptionOtherConvenience" placeholder="Description"
-                               style="margin-top: 4%">
-                    </div>
-                </div>
-                <div class="row mt-4" style="justify-content: center">
-                    <div class="col-md-4" style="margin-right: 3%">
-                        <input class="form-control" name="pollArea" placeholder="Poll Area" style="margin-top: 4%">
-                    </div>
-                    <div class="col-md-4">
-                        <input class="form-control" name="numberOfFloor" placeholder="Number Of Floor"
-                               style="margin-top: 4%">
                     </div>
                 </div>
                 <br>
                 <button class="btn btn-lg btn-primary btn-block" style="float:right; margin-right: 16%" type="submit">
-                    Create Service
+                    Create Contract
                 </button>
             </form>
         </div>

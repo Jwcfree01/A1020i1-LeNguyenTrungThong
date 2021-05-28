@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<%--    <link type="text/css" rel="stylesheet" href="../style/style.css"/>--%>
     <title>Form</title>
 </head>
 <body>
@@ -35,16 +34,16 @@
                     <a class="nav-link" href="/?action">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/?action=createEmployee">Employee</a>
+                    <a class="nav-link" href="/?action=listEmployee">Employee</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/?action=showCus">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/?action=createService">Service</a>
+                    <a class="nav-link" href="/?action=showService">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/?action=createContract">Contract</a>
                 </li>
             </ul>
             <form class="d-flex">

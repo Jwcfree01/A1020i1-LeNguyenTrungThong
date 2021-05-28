@@ -24,15 +24,15 @@
         <!--body-->
         <div class="col-md-10">
             <legend style="text-align: center">EDIT CUSTOMER</legend>
-            <form action="/?action=edit" method="post" style="margin-top: 7%">
+            <form action="" method="post" style="margin-top: 7%">
                 <div class="row" style="justify-content: center">
                     <div class="col-md-4" style="margin-right: 3%">
                         <select class="form-select" aria-label="Default select example" name="cus_type" >
-                            <option value="5" ${customer.cusTypeId == "5" ? selected: ''}>Member</option>
-                            <option value="4" ${customer.cusTypeId == "4" ? selected: ''}>Silver</option>
-                            <option value="3" ${customer.cusTypeId == "3" ? selected: ''}>Gold</option>
-                            <option value="2" ${customer.cusTypeId == "2" ? selected: ''}>Platinum</option>
-                            <option value="1" ${customer.cusTypeId == "1" ? selected: ''}>Diamond</option>
+                            <option value="5" ${customer.cusTypeId == "5" ? 'selected': ''}>Member</option>
+                            <option value="4" ${customer.cusTypeId == "4" ? 'selected': ''}>Silver</option>
+                            <option value="3" ${customer.cusTypeId == "3" ? 'selected': ''}>Gold</option>
+                            <option value="2" ${customer.cusTypeId == "2" ? 'selected': ''}>Platinum</option>
+                            <option value="1" ${customer.cusTypeId == "1" ? 'selected': ''}>Diamond</option>
                         </select>
                     </div>
                     <div class="col-md-4">
@@ -44,7 +44,11 @@
                         <input class="form-control" name="birthday" type="date" value="${customer.cusBirthDay}">
                     </div>
                     <div class="col-md-4">
-                        <input class="form-control" name="gender" placeholder="Gender" value="${customer.cusGender}">
+                        <select class="form-select" aria-label="Default select example" name="gender" >
+                            <option value="male" ${customer.cusGender == "male" ? 'selected': ''}>Male</option>
+                            <option value="female" ${customer.cusGender == "female" ? 'selected': ''}>Female</option>
+                            <option value="other" ${customer.cusGender == "other" ? 'selected': ''}>Other</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mt-4" style="justify-content: center">
@@ -65,7 +69,7 @@
                 </div>
                 <br>
                 <button class="btn btn-lg btn-primary btn-block" style="float:right; margin-right: 16%" type="submit">
-                    Create Customer
+                    Save
                 </button>
             </form>
         </div>

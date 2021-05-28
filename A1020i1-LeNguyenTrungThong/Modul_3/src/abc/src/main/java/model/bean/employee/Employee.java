@@ -1,4 +1,4 @@
-package model.bean;
+package model.bean.employee;
 
 public class Employee {
     int emId;
@@ -6,19 +6,20 @@ public class Employee {
     String emBirthDay;
     int emIdCard;
     double emSalary;
-    String emPhone;
+    int emPhone;
     String emEmail;
     String emAddress;
-    int emIdPosition;
-    int emIdEducation;
-    int emIdDivision;
+    Position position;
+    Division division;
+    Education_degree education_degree;
     String userName;
 
     public Employee() {
     }
 
-    public Employee(int emId, String emName, String emBirthDay, int emIdCard, double emSalary, String emPhone,
-           String emEmail, String emAddress, int emIdPosition, int emIdEducation, int emIdDivision, String userName) {
+    public Employee(int emId, String emName, String emBirthDay, int emIdCard, double emSalary, int emPhone,
+                    String emEmail, String emAddress, Position position, Division division,
+                    Education_degree education_degree, String userName) {
         this.emId = emId;
         this.emName = emName;
         this.emBirthDay = emBirthDay;
@@ -27,9 +28,25 @@ public class Employee {
         this.emPhone = emPhone;
         this.emEmail = emEmail;
         this.emAddress = emAddress;
-        this.emIdPosition = emIdPosition;
-        this.emIdEducation = emIdEducation;
-        this.emIdDivision = emIdDivision;
+        this.position = position;
+        this.division = division;
+        this.education_degree = education_degree;
+        this.userName = userName;
+    }
+
+    public Employee(String emName, String emBirthDay, int emIdCard, double emSalary, int emPhone,
+                    String emEmail, String emAddress, Position position, Division division,
+                    Education_degree education_degree, String userName) {
+        this.emName = emName;
+        this.emBirthDay = emBirthDay;
+        this.emIdCard = emIdCard;
+        this.emSalary = emSalary;
+        this.emPhone = emPhone;
+        this.emEmail = emEmail;
+        this.emAddress = emAddress;
+        this.position = position;
+        this.division = division;
+        this.education_degree = education_degree;
         this.userName = userName;
     }
 
@@ -73,11 +90,11 @@ public class Employee {
         this.emSalary = emSalary;
     }
 
-    public String getEmPhone() {
+    public int getEmPhone() {
         return emPhone;
     }
 
-    public void setEmPhone(String emPhone) {
+    public void setEmPhone(int emPhone) {
         this.emPhone = emPhone;
     }
 
@@ -97,28 +114,28 @@ public class Employee {
         this.emAddress = emAddress;
     }
 
-    public int getEmIdPosition() {
-        return emIdPosition;
+    public Position getPosition() {
+        return position;
     }
 
-    public void setEmIdPosition(int emIdPosition) {
-        this.emIdPosition = emIdPosition;
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
-    public int getEmIdEducation() {
-        return emIdEducation;
+    public Division getDivision() {
+        return division;
     }
 
-    public void setEmIdEducation(int emIdEducation) {
-        this.emIdEducation = emIdEducation;
+    public void setDivision(Division division) {
+        this.division = division;
     }
 
-    public int getEmIdDivision() {
-        return emIdDivision;
+    public Education_degree getEducation_degree() {
+        return education_degree;
     }
 
-    public void setEmIdDivision(int emIdDivision) {
-        this.emIdDivision = emIdDivision;
+    public void setEducation_degree(Education_degree education_degree) {
+        this.education_degree = education_degree;
     }
 
     public String getUserName() {

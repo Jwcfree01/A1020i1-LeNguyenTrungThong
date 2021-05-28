@@ -44,7 +44,7 @@ create table employee(
 	employee_id int primary key auto_increment,
     employee_name varchar(50),
     employee_birthday date,
-    employee_id_card varchar(45),
+    employee_id_card int(11),
     employee_salary double,
     employee_phone int(11),
     employee_email varchar(45),
@@ -57,6 +57,10 @@ create table employee(
     foreign key(education_degree_id) references education_degree (education_degree_id),
     foreign key(division_id) references division (division_id)
 );
+-- update employee
+-- set employee_name = ?, employee_birthday = ?, employee_id_card = ?, employee_salary = ?, employee_phone = ?, employee_email = ?, 
+-- employee_address = ?, position_id = ?, education_degree_id = ?, division_id = ?, user_name = ?
+--  where employee_id = ?
 
 -- customer_id_card: số chứng minh
 create table customer(
@@ -92,7 +96,7 @@ create table service(
     service_type_id int,
     standard_room nvarchar(45),
     description_other_convenience nvarchar(45),
-    poll_area int,
+    poll_servicearea int,
     number_of_floor int,
     foreign key (service_type_id) references service_type (service_type_id),
     foreign key (rent_type_id) references rent_type (rent_type_id)
@@ -131,6 +135,17 @@ insert into customer_type values
 ('4', 'Silver'),
 ('5', 'Member');
 
+insert into service_type values
+(1, 'villa'),
+(2, 'house'),
+(3, 'room');
+
+insert into rent_type values
+(1, 'yeah', 5000),
+(2, 'month', 3000),
+(3, 'day', 2000),
+(4, 'house', 1000);
+
 insert into customer values
 (1, 1, 'thong', '2000/04/14', 'male', '206267400', 0981729499, 'letrungthong@gmail.com', 'quang nam');
 
@@ -139,3 +154,39 @@ insert into customer values
 
 select * from customer
 where customer_id = 1;
+
+insert into position values
+(1, 'Director'),
+(2, 'Manager'),
+(3, 'Supervisor'),
+(4, 'Specialist'),
+(5, 'Waiter'),
+(6, 'Receptionist');
+
+insert into education_degree values
+(1, 'Graduate'),
+(2, 'University'),
+(3, 'College'),
+(4, 'Intermediate');
+
+insert into division values
+(1,'Sale–Marketing'),
+(2, 'Management'),
+(3, 'Waiter'),
+(4, 'Administrative');
+
+insert into employee 
+values (1, 'abc', '2021-12-10', 646464646, 55656, '0981729499', 'letrungthong14042000@gmail.com', '71 dũng sĩ thanh khê đà nẵng', 1, 1, 1, 
+'hoangthaovitt@gmail.com');
+
+select employee_id, employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone, employee_email, employee_address, 
+position_name, education_degree_name, division_name
+from employee inner join position on employee.position_id = position.position_id
+inner join education_degree on employee.education_degree_id = education_degree.education_degree_id
+inner join division on employee.division_id = division.division_id;
+
+update customer set customer_type_id = 4, customer_name = 'abc', customer_birthday = '2021-07-01', customer_gender = 'female', 
+customer_id_card = 206267400, customer_phone = 0981729499, customer_email = 'abc@gmail.com', customer_address = 'quang nam'
+where customer_id = 2;
+
+select *from service
