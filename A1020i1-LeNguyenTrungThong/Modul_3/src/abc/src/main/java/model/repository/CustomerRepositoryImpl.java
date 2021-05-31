@@ -172,6 +172,36 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return row > 0;
     }
 
+    @Override
+    public List<Service> showService() {
+        List<Service> serviceList = new ArrayList<>();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = this.baseRepository.getConnection().prepareStatement
+                    ("select * from service");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            Service service = null;
+            while (resultSet.next()) {
+                int id = resultSet.getInt("service_id");
+                String name = resultSet.getString("service_name");
+                int area = resultSet.getInt("service_area");
+                int cost = resultSet.getInt("service_cost");
+                int maxPeople = resultSet.getInt("service_max_people");
+                int rentTypeId = resultSet.getInt("rent_type_id");
+                int serviceTypeId = resultSet.getInt("service_type_id");
+                String standardRoom = resultSet.getString("standard_room");
+                String description = resultSet.getString("description_other_convenience");
+                int pollServicearea = resultSet.getInt("poll_servicearea");
+                int numberOfFloor = resultSet.getInt("number_of_floor");
+                service = new Service(id, name,area, cost, maxPeople, rentTypeId, serviceTypeId, standardRoom, description, pollServicearea, numberOfFloor);
+                serviceList.add(service);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return serviceList;
+    }
+
     //employee
     @Override
     public boolean createEmployee(Employee employee) {

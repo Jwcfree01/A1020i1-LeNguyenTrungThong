@@ -1,5 +1,6 @@
 package controller;
 
+import common.Validate;
 import model.bean.customer.Customer;
 import model.bean.employee.Division;
 import model.bean.employee.Employee;
@@ -207,13 +208,13 @@ public class CustomerServlet extends HttpServlet {
         Service service = new Service(nameService, area, cost, maxPeople, rentTypeId, serviceTypeId,
                 standardRoom, description, pollArea, numberOfFloor);
         this.customerService.createService(service);
-        loadList(request, response);
+        showListService(request, response);
     }
 
     private void showListService(HttpServletRequest request, HttpServletResponse response) {
-        request.setAttribute("showCustomer", this.customerService.showCustomer());
+        request.setAttribute("showService", this.customerService.showService());
         try {
-            request.getRequestDispatcher("customer/list.jsp").forward(request, response);
+            request.getRequestDispatcher("service/listService.jsp").forward(request, response);
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
@@ -253,10 +254,13 @@ public class CustomerServlet extends HttpServlet {
         String birthday = request.getParameter("birthday");
         String gender = request.getParameter("gender");
         String cmnd = request.getParameter("cmnd");
+        String cmndValidate = Validate.cmnd(cmnd);
         int phone = Integer.parseInt(request.getParameter("phone"));
+        String phone1 = phone+"";
+        String phoneValidate = Validate.phone(phone1);
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        Customer customer = new Customer(cus_type, name, birthday, gender, cmnd, phone, email, address);
+        Customer customer = new Customer(cus_type, name, birthday, gender, cmndValidate, phone, email, address);
         this.customerService.createCustomer(customer);
         listCustomer(request, response);
     }

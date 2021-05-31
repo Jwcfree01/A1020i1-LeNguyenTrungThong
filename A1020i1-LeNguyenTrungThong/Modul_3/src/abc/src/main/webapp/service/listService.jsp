@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <jsp:include page="../customer/header.jsp"/>
+    <jsp:include page="../template/header.jsp"/>
 </div>
 
 <h2 style="text-align: center; padding-top: 2%; padding-bottom: 1%">View Service</h2>
@@ -26,7 +26,6 @@
             <th>Description</th>
             <th>Pool Area</th>
             <th>Number Of Floor</th>
-            <th>Edit</th>
             <th>Delete</th>
         </tr>
         </thead>
@@ -44,14 +43,13 @@
                 <td><c:out value="${service.description}"></c:out></td>
                 <td><c:out value="${service.pollArea}"></c:out></td>
                 <td><c:out value="${service.numberOfFloor}"></c:out></td>
-                <td><a href="/?action=editService&id=${service.id}">Edit</a></td>
                 <td><a href="/?action=deleteService&id=${service.id}">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
     <button type="button" class="btn btn-outline-dark" style="float: right; text-decoration: none; color: red">
-        <a href="/?action=createService" style="text-decoration: none">Create user</a>
+        <a href="/?action=createService" style="text-decoration: none">Create service</a>
     </button>
 </div>
 </body>

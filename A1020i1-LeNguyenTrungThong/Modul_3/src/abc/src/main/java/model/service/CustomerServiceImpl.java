@@ -41,6 +41,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public List<Service> showService() {
+        return this.customerRepository.showService();
+    }
+
+    @Override
     public boolean createEmployee(Employee employee) {
         return this.customerRepository.createEmployee(employee);
     }

@@ -10,7 +10,7 @@
 </head>
 <body>
 <div>
-    <jsp:include page="../customer/header.jsp"/>
+    <jsp:include page="../template/header.jsp"/>
 </div>
 
 <div class="container-fluid">

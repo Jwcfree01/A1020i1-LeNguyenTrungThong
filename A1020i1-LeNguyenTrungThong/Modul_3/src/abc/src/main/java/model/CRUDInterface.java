@@ -14,6 +14,7 @@ public interface CRUDInterface {
     List<Customer>showCustomer();
 
     boolean createService(Service service);
+    List<Service>showService();
 
     boolean createEmployee(Employee employee);
     List<Employee>showListEmployee();

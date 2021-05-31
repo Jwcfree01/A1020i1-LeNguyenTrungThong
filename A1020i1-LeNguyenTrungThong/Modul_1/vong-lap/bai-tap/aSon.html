@@ -3,47 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>ASON</title>
-    <style>
-        body{
-            font-weight: 800;
-        }
-    </style>
+<!--    <style>-->
+<!--        body{-->
+<!--            font-weight: 800;-->
+<!--        }-->
+<!--    </style>-->
 </head>
 <body>
-<button onclick="play()">Play</button>
-<h2 id="kq"></h2>
-<h2 id="kq1"></h2>
-<h2 id="kq2"></h2>
+<!--<button onclick="play()">Play</button>-->
+<!--<h2 id="kq"></h2>-->
+<!--<h2 id="kq1"></h2>-->
+<!--<h2 id="kq2"></h2>-->
 
+
+<!--<script>-->
+<!--    function play() {-->
+<!--        document.getElementById('kq').innerHTML = '<input type="text" placeholder="start" id="start">';-->
+<!--        document.getElementById('kq1').innerHTML = '<input type="text" placeholder="end" id="end">';-->
+<!--        document.getElementById('kq2').innerHTML = '<button onclick="starts()">Start</button>';-->
+<!--    }-->
+
+<!--    function TaoSoNgauNhien(min, max){-->
+<!--        return Math.floor(Math.random() * (max - min));-->
+<!--    }-->
+
+<!--    function starts() {-->
+<!--        let a = document.getElementById("start").value;-->
+<!--        let b = document.getElementById("end").value;-->
+<!--        console.log(a);-->
+<!--        console.log(b);-->
+<!--        let person = prompt("Please enter number");-->
+<!--        console.log(person);-->
+<!--        let n = TaoSoNgauNhien(a,b);-->
+<!--        console.log(n);-->
+<!--        if (person == n){-->
+<!--            alert("ok");-->
+<!--        }else if (person<n){-->
+<!--            alert("<");-->
+<!--        }else{-->
+<!--            alert(">");-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<input type="text" id="thong">
+<input type="submit" value="Search" onclick="abc()">
+<p id="result"></p>
 
 <script>
-    function play() {
-        document.getElementById('kq').innerHTML = '<input type="text" placeholder="start" id="start">';
-        document.getElementById('kq1').innerHTML = '<input type="text" placeholder="end" id="end">';
-        document.getElementById('kq2').innerHTML = '<button onclick="starts()">Start</button>';
-    }
+    let eng = ["dictionary","hello","cat","pen","phone","rose","table","pig","duck","eat","drink"];
+    let vietnam = ["Từ điển","Xin chào","Con mèo","Cây viết","Điện thoại","Hoa hồng","Cái bàn","Con lợn","Con vịt","Ăn","Uống"];
+    let n = document.getElementById("thong").value;
+    console.log(n);
 
-    function TaoSoNgauNhien(min, max){
-        return Math.floor(Math.random() * (max - min));
-    }
-
-    function starts() {
-        let a = document.getElementById("start").value;
-        let b = document.getElementById("end").value;
-        console.log(a);
-        console.log(b);
-        let person = prompt("Please enter number");
-        console.log(person);
-        let n = TaoSoNgauNhien(a,b);
-        console.log(n);
-        if (person == n){
-            alert("ok");
-        }else if (person<n){
-            alert("<");
-        }else{
-            alert(">");
+    function abc() {
+        for (let i = 0; i < eng.length; i++) {
+            if (eng[i] == n) {
+                console.log(eng[i]);
+                document.getElementById("result").innerHTML = vietnam[i];
+            }
         }
     }
+
 </script>
+
 </body>
 </html>

@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <jsp:include page="header.jsp"/>
+    <jsp:include page="../template/header.jsp"/>
 </div>
 
 <h2 style="text-align: center; padding-top: 2%; padding-bottom: 1%">View Users</h2>

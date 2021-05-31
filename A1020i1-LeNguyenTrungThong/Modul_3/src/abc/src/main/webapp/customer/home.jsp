@@ -7,11 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <%--    <link type="text/css" rel="stylesheet" href="../style/style.css"/>--%>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Home</title>
 </head>
 <body>
 <div>
-    <jsp:include page="header.jsp"/>
+    <jsp:include page="../template/header.jsp"/>
 </div>
 
 <%--body--%>
@@ -25,32 +26,11 @@
         </div>
         <!--body-->
         <div class="col-md-9">
-<%--            <table class="table">--%>
-<%--                <thead class="table-dark">--%>
-<%--                <tr>--%>
-<%--                    <th>Id</th>--%>
-<%--                    <th>Name</th>--%>
-<%--                    <th>Email</th>--%>
-<%--                    <th>Address</th>--%>
-<%--                    <th>Edit</th>--%>
-<%--                    <th>Delete</th>--%>
-<%--                </tr>--%>
-<%--                </thead>--%>
-<%--                <tbody>--%>
-<%--                <c:forEach var="user" items="${showUser}">--%>
-<%--                    <tr>--%>
-<%--                        <td><c:out value="${user.id}"></c:out></td>--%>
-<%--                        <td><c:out value="${user.name}"></c:out></td>--%>
-<%--                        <td><c:out value="${user.email}"></c:out></td>--%>
-<%--                        <td><c:out value="${user.country}"></c:out></td>--%>
-<%--                        <td><a href="/?action=edit&id=${user.id}">Edit</a></td>--%>
-<%--                        <td><a href="/?action=delete&id=${user.id}">Delete</a></td>--%>
-<%--                    </tr>--%>
-<%--                </c:forEach>--%>
-<%--                </tbody>--%>
-<%--            </table>--%>
         </div>
     </div>
+</div>
+<div>
+    <jsp:include page="../template/footer.jsp"/>
 </div>
 
 

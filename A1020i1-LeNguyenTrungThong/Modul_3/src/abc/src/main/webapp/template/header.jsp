@@ -15,8 +15,9 @@
         <div class="col-md-6">
             <h2 class="logo">FURAMA Resort</h2>
         </div>
-        <div class="col-md-6">
-            <h3 name="fullName" class="fullName">ten</h3>
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <h5 name="fullName" class="fullName">Trung Thong</h5>
         </div>
     </div>
 </div>
