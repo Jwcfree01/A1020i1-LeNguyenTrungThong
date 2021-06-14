@@ -104,8 +104,8 @@ private void showCreate(HttpServletRequest request, HttpServletResponse response
                 customer = null;
             listCustomer(request,response);
             }
-        } catch (SQLException | ServletException e) {
-            e.printStackTrace();
+            } catch (SQLException | ServletException e) {
+                e.printStackTrace();
         }
 
         // validate thất bại
