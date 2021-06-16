@@ -10,10 +10,10 @@ import service.CustomerServiceImpl;
 
 @Controller
 public class QLKHController {
-//    @Autowired
-//    private CustomerService customerService ;
+    @Autowired
+    private CustomerService customerService ;
 
-    CustomerService customerService = new CustomerServiceImpl();
+//    CustomerService customerService = new CustomerServiceImpl();
 
     @GetMapping(value = "/list")
     public ModelAndView showCustomer(){

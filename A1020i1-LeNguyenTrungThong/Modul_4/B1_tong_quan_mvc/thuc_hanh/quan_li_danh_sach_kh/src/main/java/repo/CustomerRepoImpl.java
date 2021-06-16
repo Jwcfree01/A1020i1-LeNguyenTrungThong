@@ -1,12 +1,14 @@
 package repo;
 
 import bean.Customer;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+@Repository
 public class CustomerRepoImpl implements CustomerRepo {
     private static Map<Integer, Customer> Customers = new TreeMap<>();
     static {
