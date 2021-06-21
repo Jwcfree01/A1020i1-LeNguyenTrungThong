@@ -23,7 +23,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 
     @Override
     public Customer finById(int id) {
-        return customerList.get(id);
+        return customerList.get(id-1);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 
     @Override
     public void delete(int id) {
-        customerList.remove(id);
+        customerList.remove(id-1);
     }
 
     @Override

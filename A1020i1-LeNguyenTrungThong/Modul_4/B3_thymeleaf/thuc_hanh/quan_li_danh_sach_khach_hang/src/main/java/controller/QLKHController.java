@@ -30,13 +30,13 @@ public class QLKHController {
         return "list";
     }
 
-    @GetMapping(value = "/customer/create")
+    @GetMapping(value = "/create")
     public String showFormCreate(Model model) {
         model.addAttribute("customer", new Customer());
         return "create";
     }
 
-    @PostMapping(value = "/customer/create")
+    @PostMapping(value = "/create")
     private String createCustomer(Customer customer, RedirectAttributes redirectAttributes) {
         customerService.save(customer);
         redirectAttributes.addFlashAttribute("success", "create customer " + customer.getName() + " ok");

@@ -212,6 +212,6 @@ GROUP BY dichVuDiKem.idDichVuDiKem;
 
 select idNhanVien, hoTen, email, sdt, ngaySinh, diaChi, 'nhan vien' as form_table
 from nhanvien
-union all
+union allstudent
 select idKH, hoVaTen, email, sdt, ngaySinh, diaChi, 'khach hang' as form_table
 from khachhang;
