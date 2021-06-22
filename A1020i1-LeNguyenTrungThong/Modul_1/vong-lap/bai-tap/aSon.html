@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>ASON</title>
-<!--    <style>-->
-<!--        body{-->
-<!--            font-weight: 800;-->
-<!--        }-->
-<!--    </style>-->
+    <!--    <style>-->
+    <!--        body{-->
+    <!--            font-weight: 800;-->
+    <!--        }-->
+    <!--    </style>-->
 </head>
 <body>
 <!--<button onclick="play()">Play</button>-->
@@ -46,26 +46,82 @@
 <!--    }-->
 <!--</script>-->
 
-<input type="text" id="thong">
-<input type="submit" value="Search" onclick="abc()">
-<p id="result"></p>
+<!--<input type="text" id="thong">-->
+<!--<input type="submit" value="Search" onclick="abc()">-->
+<!--<p id="result"></p>-->
 
+<!--<script>-->
+<!--    let eng = ["dictionary","hello","cat","pen","phone","rose","table","pig","duck","eat","drink"];-->
+<!--    let vietnam = ["Từ điển","Xin chào","Con mèo","Cây viết","Điện thoại","Hoa hồng","Cái bàn","Con lợn","Con vịt","Ăn","Uống"];-->
+<!--    let n = document.getElementById("thong").value;-->
+<!--    console.log(n);-->
+
+<!--    function abc() {-->
+<!--        for (let i = 0; i < eng.length; i++) {-->
+<!--            if (eng[i] == n) {-->
+<!--                console.log(eng[i]);-->
+<!--                document.getElementById("result").innerHTML = vietnam[i];-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+
+<!--</script>-->
+
+
+<!--<script>-->
+<!--    function prefixSums() {-->
+<!--        let inputNum = parseInt(prompt('nhap do dai cua mang'));-->
+<!--        let prefixArray = [];-->
+<!--        // let prefixSum = [];-->
+<!--        // do {-->
+<!--        //     inputNum = parseInt(prompt("Enter the number of array elements: "));-->
+<!--        // } while (inputNum <= 0 || isNaN(inputNum))-->
+
+<!--        for (let i = 0; i < inputNum; i++) {-->
+<!--            prefixArray[i] = parseInt(prompt("Please enter element " + i + " of the array"));-->
+<!--            // for (let j = 0; j < i+1; j++) {-->
+<!--            //     if(i=0){-->
+<!--            //         prefixArray[i] = prefixArray[i];-->
+<!--            //     }else {-->
+<!--            //         prefixArray[i] += prefixArray[i];-->
+<!--            //     }-->
+<!--            // }-->
+<!--        }-->
+<!--        // for (let i=0; i<inputNum; i++){-->
+<!--        //     prefixSum[i] = prefixArray[i];-->
+<!--        //     if (i>0){-->
+<!--        //         prefixSum[i] = prefixSum[i-1] + prefixArray[i];-->
+<!--        //     }-->
+<!--        // }-->
+<!--        console.log(prefixArray);-->
+<!--        // console.log(prefixSum);-->
+<!--        // console.log(prefixSums());-->
+
+<!--        alert("Prefix Sums " + prefixArray);-->
+<!--    }-->
+
+<!--    prefixSums();-->
+<!--</script>-->
 <script>
-    let eng = ["dictionary","hello","cat","pen","phone","rose","table","pig","duck","eat","drink"];
-    let vietnam = ["Từ điển","Xin chào","Con mèo","Cây viết","Điện thoại","Hoa hồng","Cái bàn","Con lợn","Con vịt","Ăn","Uống"];
-    let n = document.getElementById("thong").value;
-    console.log(n);
+    let arr1 = [7,2,5,3,5,3];
+    let arr2 = [7,2,5,4,6,3,5,3];
 
-    function abc() {
-        for (let i = 0; i < eng.length; i++) {
-            if (eng[i] == n) {
-                console.log(eng[i]);
-                document.getElementById("result").innerHTML = vietnam[i];
+    let missValue = [];
+    for (let i=0; i<arr2.length; i++){
+        let flag = true;
+        let n = arr2[i];
+        for (let j=0; j<arr1.length; j++){
+            let m = arr1[j];
+            if (m == n){
+                flag = false;
+                break;
             }
         }
+        if (flag == true){
+            missValue.push(n);
+        }
     }
-
+    console.log(missValue);
 </script>
-
 </body>
 </html>

@@ -5,17 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import vn.codegym.model.Customer;
 import vn.codegym.service.CustomerService;
-import vn.codegym.service.CustomerServiceImpl;
 
 @Controller
 public class CustomerController {
 
-//    @Autowired
-    CustomerService customerService = new CustomerServiceImpl();
+    @Autowired
+    CustomerService customerService ;
 
     @GetMapping(value = "/create")
     public String showFormCreate(Model model){
@@ -32,5 +32,23 @@ public class CustomerController {
     @GetMapping(value = "/list")
     public ModelAndView listCustomer(){
         return new ModelAndView("list", "listCustomer", this.customerService.findAll());
+    }
+
+    @GetMapping(value = "/delete/{id}")
+    public String deleteCustomer(@PathVariable int id){
+        this.customerService.deleteCustomer(id);
+        return "redirect:/list";
+    }
+
+    @GetMapping(value = "/edit/{id}")
+    public String showFormEdit(Model model, @PathVariable int id){
+        model.addAttribute("customer", customerService.findById(id));
+        return "edit";
+    }
+
+    @PostMapping(value = "/edit")
+    public String updateCustomer(@ModelAttribute Customer customer){
+        this.customerService.editCustomer(customer);
+        return "redirect:/list";
     }
 }

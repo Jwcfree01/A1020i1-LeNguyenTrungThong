@@ -1,13 +1,16 @@
 package vn.codegym.repository;
 
+import org.springframework.stereotype.Repository;
 import vn.codegym.model.Customer;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Repository
+@Transactional
 public class CustomerRepositoryImpl implements CustomerRepository {
 
     @PersistenceContext
@@ -25,17 +28,20 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public void editCustomer(int id) {
+    public Customer editCustomer(Customer customer) {
+        return entityManager.merge(customer);
+    }
 
+    @Override
+    public Customer findById(int id) {
+        return entityManager.find(Customer.class, id);
     }
 
     @Override
     public void deleteCustomer(int id) {
-
-    }
-
-    @Override
-    public void findById(int id) {
-
+        Customer customer = entityManager.find(Customer.class, id);
+        if (customer != null) {
+            entityManager.remove(customer);
+        }
     }
 }

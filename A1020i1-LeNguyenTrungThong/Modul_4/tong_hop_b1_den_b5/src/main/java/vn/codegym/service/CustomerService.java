@@ -9,9 +9,9 @@ public interface CustomerService {
 
     void saveCustomer(Customer customer);
 
-    void editCustomer(int id);
+    Customer editCustomer(Customer customer);
 
     void deleteCustomer(int id);
 
-    void findById(int id);
+    Customer findById(int id);
 }
