@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1798307d-b8fd-4fe6-973d-a7fb37c59015" name="Default Changelist" comment="" />
+    <list default="true" id="1798307d-b8fd-4fe6-973d-a7fb37c59015" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/java/vn/codegym/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/java/vn/codegym/blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/java/vn/codegym/blog/repository/BlogRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/java/vn/codegym/blog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/java/vn/codegym/blog/service/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B7_spring_data_repository/bai_tap/blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +43,8 @@
       <option name="presentableId" value="Default" />
       <updated>1625055020880</updated>
       <workItem from="1625055022021" duration="7000" />
+      <workItem from="1625151175070" duration="836000" />
+      <workItem from="1625222654869" duration="8000" />
     </task>
     <servers />
   </component>
