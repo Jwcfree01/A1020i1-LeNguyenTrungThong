@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h3 style="text-align: center">List Student</h3>
+<br>
+<br>
+
+<!--search-->
+<form class="d-flex" action="/search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="kq">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+<!--table-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="items:${listStudent}">
+        <td th:text="${items.id}"></td>
+        <td th:text="${items.name}"></td>
+        <td th:text="${items.age}"></td>
+        <td th:text="${items.phone}"></td>
+        <td th:text="${items.email}"></td>
+        <td th:text="${items.gender}"></td>
+        <td th:text="${items.price}"></td>
+        <td><a th:href="@{/edit/{id}(id=${items.id})}">Edit</a></td>
+        <td><a th:href="@{/delete/{id}(id=${items.id})}">Delete</a></td>
+
+    </tr>
+    </tbody>
+</table>
+<a href="/create">Create</a>
+<!--pageable-->
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

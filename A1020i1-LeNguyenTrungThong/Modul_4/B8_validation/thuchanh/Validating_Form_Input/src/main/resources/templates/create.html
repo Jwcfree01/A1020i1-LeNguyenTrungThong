@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<form action="/create" method="post" th:object="${student}">
+    <fieldset>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Name" th:field="*{name}">
+                <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Age" th:field="*{age}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Phone" th:field="*{phone}">
+                <div style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Email" th:field="*{email}">
+            </div>
+        </div><div class="form-group row">
+            <label class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Gender" th:field="*{gender}">
+            </div>
+        </div><div class="form-group row">
+            <label class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Price" th:field="*{price}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
