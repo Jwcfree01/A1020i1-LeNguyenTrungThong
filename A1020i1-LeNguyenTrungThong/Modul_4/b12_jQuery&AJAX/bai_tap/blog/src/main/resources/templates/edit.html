@@ -1,0 +1,15 @@
+<form th:action="@{/edit}" th:object="${blog}" method="get">
+    <tr>
+        <td>Title: </td>
+        <td>
+            <input type="text" th:field="*{title}" />
+        </td>
+    </tr>
+    <tr>
+        <td>Content: </td>
+        <td>
+            <input type="text" th:field="*{content}" />
+        </td>
+    </tr>
+    <input type="submit" th:value="Update">
+</form>

@@ -2,9 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbac0c5c-d8b7-4fe2-960d-13c9fff2aa26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../B10_Session&amp;Cookie/thuchanh/demView/src/main/java/vn/codegym/hitcounterr/controller/CounterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../B10_Session&amp;Cookie/thuchanh/demView/src/main/java/vn/codegym/hitcounterr/model/MyCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../B10_Session&amp;Cookie/thuchanh/demView/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Modul_3/src/casse_db/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Modul_3/src/casse_db/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/bai_tap/hom_thu/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_data_binding&amp;form/thuc_hanh/form&amp;dataBinding/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/common/Exception/EmailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/common/Exception/EmailException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/CRUD_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/CRUD_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/CandidateExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/CandidateExperience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/CandidateFresher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/CandidateFresher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/CandidateIntern.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/bean/CandidateIntern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/repository/CandidateRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/repository/CandidateRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/service/CandidateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B7_spring_data_repository/bai_tap/EmployeeManager/src/main/java/model/service/CandidateServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1626779875917</updated>
       <workItem from="1626779877033" duration="9000" />
+      <workItem from="1627458430850" duration="255000" />
     </task>
     <servers />
   </component>

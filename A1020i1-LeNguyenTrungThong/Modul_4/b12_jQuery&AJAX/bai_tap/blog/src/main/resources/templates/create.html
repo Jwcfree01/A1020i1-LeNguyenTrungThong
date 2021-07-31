@@ -1,0 +1,15 @@
+<form th:action="@{/create}" th:object="${blog}" method="post">
+    <tr>
+        <td>Title: </td>
+        <td>
+            <input type="text" th:field="*{title}" />
+        </td>
+    </tr>
+    <tr>
+        <td>Content: </td>
+        <td>
+            <input type="text" th:field="*{content}" />
+        </td>
+    </tr>
+    <input type="submit" th:value="Create">
+</form>

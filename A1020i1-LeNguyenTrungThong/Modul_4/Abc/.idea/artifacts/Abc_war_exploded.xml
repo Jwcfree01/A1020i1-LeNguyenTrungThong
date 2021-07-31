@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Abc:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Abc_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Abc/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Abc" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../../Software/sqljdbc_9.2.1.0_enu/sqljdbc_9.2/enu/mssql-jdbc-9.2.1.jre15.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
