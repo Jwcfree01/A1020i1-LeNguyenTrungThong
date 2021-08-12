@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8"/>
     <title>Smooth navigation</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<header class="main-header">
+<header class="main-header" th:fragment="header">
     <div class="container">
         <nav class="navbar navbar-expand-lg main-nav px-0">
             <a class="navbar-brand" href="/mojo">
