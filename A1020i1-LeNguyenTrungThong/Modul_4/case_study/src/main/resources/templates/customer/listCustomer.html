@@ -29,10 +29,18 @@
                             <div class="col-sm-4"><h2>Customer <b>Details</b></h2></div>
                             <div class="col-sm-4"><h2 style="color: yellow" th:text="${msg}"></h2></div>
                             <div class="col-sm-4">
-                                <div class="search-box">
-                                    <i class="material-icons">&#xE8B6;</i>
-                                    <input type="text" class="form-control" placeholder="Search&hellip;">
-                                </div>
+<!--                                <div class="search-box">-->
+<!--                                    <i class="material-icons">&#xE8B6;</i>-->
+<!--                                    <input type="text" class="form-control" placeholder="Search&hellip;">-->
+<!--                                </div>-->
+                                <form class="navbar-form navbar-right" method="get" id="searchForm" th:action="@{/customer/search}">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="searchValue" name="key" placeholder="Search">
+                                        <button id="searchBtn" class="btn btn-light" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -74,6 +82,8 @@
                         </tr>
                         </tbody>
                     </table>
+
+<!--                    paging-->
                     <div class="clearfix">
                         <div class="row">
                             <div class="col">

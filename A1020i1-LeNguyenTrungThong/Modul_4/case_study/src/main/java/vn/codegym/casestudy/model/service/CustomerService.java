@@ -12,5 +12,5 @@ public interface CustomerService {
     Customer findById(String id);
     void updateCustomer(Customer customer);
     Page<Customer> findAll(Pageable pageable);
-    Page<Customer> searchByName(Pageable pageable);
+    Page<Customer> searchByName(String key, Pageable pageable);
 }

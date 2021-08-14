@@ -93,6 +93,7 @@
         $('.btnModalView').click(function (event) {
             $.ajax({
                 url: "edit/"+$(this).next().val(),
+                data: "",
                 type: "GET",
                 success: function (result) {
                     $('.modal-body').html(result);

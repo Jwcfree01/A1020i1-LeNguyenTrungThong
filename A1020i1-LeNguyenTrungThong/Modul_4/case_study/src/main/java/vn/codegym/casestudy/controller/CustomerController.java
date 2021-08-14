@@ -71,8 +71,21 @@ public class CustomerController {
         return "redirect:/customer/list";
     }
 
-    @GetMapping(value = "/notAccess")
-        public String showNotAccess(){
-        return "notAccess";
+    @GetMapping(value = "/search")
+    public String searchByKey(@RequestParam String key, @PageableDefault(value = 5) Pageable pageable, Model model){
+        Page<Customer> customerList = customerService.searchByName(key, pageable);
+        if (customerList.isEmpty()) {
+            model.addAttribute("customer", customerService.findAll(pageable));
+        } else {
+            model.addAttribute("key", customerService.searchByName(key, pageable));
+            model.addAttribute("customer", customerList);
+        }
+        System.out.println(customerList);
+        return "customer/listCustomer";
     }
+
+//    @GetMapping(value = "/notAccess")
+//        public String showNotAccess(){
+//        return "notAccess";
+//    }
 }

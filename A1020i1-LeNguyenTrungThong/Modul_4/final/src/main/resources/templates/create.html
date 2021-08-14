@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style/style-header.css">
+</head>
+<body>
+<div class="row" style="margin-bottom: 100px">
+    <div th:insert="~{/header::header}"></div>
+</div>
+<main>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <form class="rounded border p-4 w-50"
+              style="box-shadow: 0 10px 25px rgba(92,99,105,.2); background-color: white"
+              th:object="${khuyenMai}" th:action="@{/create}" th:method="post">
+            <h1 class="text-center mb-3 text-primary">TAO MOI KHUYEN MAI</h1>
+<!--            <div class="row">-->
+<!--                <div class="form-group ml-3">-->
+<!--                    <label>Id</label>-->
+<!--                    <input type="text" class="form-control" id="id" >-->
+<!--                    <span style="color: red" th:field="*{customerId}" th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}"></span>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="row">
+                <div class="form-group col">
+                    <label>Tieu De</label>
+                    <input type="text" class="form-control" id="tieuDe" th:field="*{tieuDe}">
+                    <span style="color: red" th:if="${#fields.hasErrors('tieuDe')}" th:errors="*{tieuDe}"></span>
+                </div>
+                <div class="form-group col">
+                    <label>Muc Giam Gia</label>
+                    <input type="text" class="form-control" id="mucGiamGia" th:field="*{mucGiamGia}">
+                    <span style="color: red" th:if="${#fields.hasErrors('mucGiamGia')}" th:errors="*{mucGiamGia}"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-group col">
+                    <label>Thoi Gian Bat Dau</label>
+                    <input type="date" class="form-control" id="thoiGianBatDau" th:field="*{thoiGianBatDau}">
+                    <span style="color: red" th:if="${#fields.hasErrors('thoiGianBatDau')}" th:errors="*{thoiGianBatDau}"></span>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Thoi Gian Ket Thuc</label>
+                        <input type="date" class="form-control" id="thoiGianKetThuc" th:field="*{thoiGianKetThuc}">
+                        <span style="color: red" th:if="${#fields.hasErrors('thoiGianKetThuc')}" th:errors="*{thoiGianKetThuc}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Mo Ta Chi Tiet</label>
+                        <textarea class="form-control" placeholder="Mo ta chi tiet" style="height: 100px" id="chiTiet" th:field="*{chiTiet}"></textarea>
+                        <span style="color: red" th:if="${#fields.hasErrors('chiTiet')}" th:errors="*{chiTiet}"></span>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+            <span>
+                <button type="submit" class="btn btn-primary mt-3 float-end" >Create</button>
+                <button type="submit" class="btn btn-danger mt-3 float-end">Cancel</button>
+            </span>
+        </form>
+    </div>
+</main>
+</body>
+</html>

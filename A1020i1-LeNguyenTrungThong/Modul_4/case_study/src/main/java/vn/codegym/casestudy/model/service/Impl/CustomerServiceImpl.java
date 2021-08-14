@@ -40,7 +40,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Page<Customer> searchByName(Pageable pageable) {
-        return null;
+    public Page<Customer> searchByName(String key, Pageable pageable) {
+        return this.customerRepository.findAllByKey(key, pageable);
     }
+
 }
