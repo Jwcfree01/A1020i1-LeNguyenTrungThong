@@ -3,7 +3,6 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../software/jstl-1.2.jar" />
     </CLASSES>
-    <JAVADOC />
     <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/../../../software/jstl-1.2.jar" recursive="false" />
   </library>
