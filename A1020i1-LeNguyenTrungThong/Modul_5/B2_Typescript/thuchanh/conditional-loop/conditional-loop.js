@@ -29,3 +29,12 @@ var sum = function (x, y) {
     return x + y;
 };
 console.log(sum(10, 20));
+//array
+var arr = new Array(3);
+arr.push("abc");
+console.log(arr);
+var arr2 = [];
+console.log(arr2.length);
+arr2.push("n");
+console.log(arr2);
+console.log(arr2.length);

@@ -1,0 +1,10 @@
+<div class="card" style="width:400px">
+  <img class="card-img-top" [src]="student1.avatar" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">{{student1.name}}</h4>
+    <p>{{student1.age}}</p>
+    <p>{{student1.address}}</p>
+    <p>{{student1.mark}}</p>
+  </div>
+  <label>Change Mark <input type="number" (change)="ChangeMark($any($event).target.value)"></label>
+</div>

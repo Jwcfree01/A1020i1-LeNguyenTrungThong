@@ -34,3 +34,14 @@ let sum = (x: number, y: number): number => {
     return x + y;
 }
 console.log(sum(10,20))
+
+//array
+let arr = new Array(3);
+arr.push("abc");
+console.log(arr);
+
+let arr2 = [];
+console.log(arr2.length);  //0
+arr2.push("n");
+console.log(arr2);
+console.log(arr2.length); //1
