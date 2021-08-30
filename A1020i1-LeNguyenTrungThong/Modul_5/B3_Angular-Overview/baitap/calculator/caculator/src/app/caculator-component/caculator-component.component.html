@@ -1,0 +1,14 @@
+<div>
+  <form action="" name="myForm">
+  <input  [value]="first" (change)="onFirstChange($any($event).target.value)" type="text" placeholder="input number">
+  <select name="" [value]="operator" (change)="onSelectChange($any($event).target.value)" id="">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input [value]="second" (change)="onSecondChange($any($event).target.value)" type="text" placeholder="input number">
+  <button (click)="calculate()" type="submit">Submit</button>
+  <h1>Ket Qua = {{output}} </h1>
+  </form>
+</div>

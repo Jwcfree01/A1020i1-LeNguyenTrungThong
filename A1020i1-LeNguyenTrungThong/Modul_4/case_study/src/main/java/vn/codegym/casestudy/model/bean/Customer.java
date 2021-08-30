@@ -30,7 +30,7 @@ public class Customer {
     private String address;
 
     @ManyToOne
-    @JoinColumn(name = "customerType_Id", nullable = false, referencedColumnName = "customerTypeId", columnDefinition = "") // cái name đó chỉ là cái tên bảng thôi á , còn cái referrent mới là
+    @JoinColumn(name = "customerType_Id", nullable = false, referencedColumnName = "customerTypeId", columnDefinition = "")
     @JsonBackReference
     private CustomerType customerType;
 
