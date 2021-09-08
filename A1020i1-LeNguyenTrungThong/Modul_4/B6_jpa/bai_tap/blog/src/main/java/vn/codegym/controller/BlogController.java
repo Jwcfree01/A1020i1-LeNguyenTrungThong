@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import vn.codegym.model.Blog;
 import vn.codegym.service.BlogService;
 
-import javax.persistence.PersistenceContext;
-
 @Controller
 public class BlogController {
 

@@ -25,7 +25,7 @@
             <legend>EDIT USER</legend>
             <form action="" method="post" class="form">
                 <input class="form-control" name="name" placeholder="Name" value="${user.name}">
-                <input class="form-control" name="email" placeholder="Email" value="${user.email}" style="margin-top: 5%">
+                <input class="form-control" name="email" placeholder="Email" value="${ttSan.maDangKi}" value="${user.email}" style="margin-top: 5%">
                 <input class="form-control" name="country" placeholder="Country" value="${user.country}" style="margin-top: 5%">
                 <br>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>

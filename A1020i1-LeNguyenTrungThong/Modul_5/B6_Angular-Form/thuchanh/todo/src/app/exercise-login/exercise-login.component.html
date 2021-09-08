@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card" src="/assets/avatar_2x.png"/>
+    <form class="form-login" #loginForm='ngForm' (ngSubmit)="submit(loginForm)">
+      <input type="text" ngModel name="email"
+             class="form-control" placeholder="Email" required email>
+      <div class="error-message"
+           *ngIf="loginForm.controls.email?.invalid && (loginForm.controls.email?.dirty || loginForm.controls.email?.touched)">
+        <p *ngIf="loginForm.controls.email.errors.required; else elseMessage">Email is required.</p>
+        <ng-template #elseMessage>
+          <p>Email is not in correct format. (i.e: example@abc.com)</p>
+        </ng-template>
+      </div>
+
+      <input type="password" ngModel name="password"
+             class="form-control" placeholder="Password" required minlength="6">
+      <div class="error-message"
+           *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.dirty || loginForm.controls.password?.touched)">
+        <p *ngIf="loginForm.controls.password.errors.required; else elseMessage">Password is required.</p>
+        <ng-template #elseMessage>
+          <p>Password must be at least 6 characters length.</p>
+        </ng-template>
+      </div>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block btn-login"
+              [disabled]="loginForm.invalid">Login
+      </button>
+    </form><!-- /form -->
+  </div><!-- /card-container -->
+</div><!-- /container -->

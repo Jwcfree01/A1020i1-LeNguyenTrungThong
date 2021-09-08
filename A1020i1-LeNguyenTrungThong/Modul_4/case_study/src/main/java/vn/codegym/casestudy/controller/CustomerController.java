@@ -15,7 +15,7 @@ import vn.codegym.casestudy.model.service.CustomerService;
 import vn.codegym.casestudy.model.service.Impl.CustomerTypeService;
 
 @Controller
-@RequestMapping("/customer")
+//@RequestMapping("/customer")
 public class CustomerController {
     @Autowired
     CustomerService customerService;
