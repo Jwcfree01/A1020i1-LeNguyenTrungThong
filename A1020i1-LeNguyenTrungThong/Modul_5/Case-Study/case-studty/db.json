@@ -1,0 +1,56 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "thong",
+      "position": "Employee",
+      "education": "University",
+      "division": "Marketing",
+      "dob": "14-04-2000",
+      "cmnd": "200678854",
+      "salary": "10000000",
+      "phone": "0981726567",
+      "email": "thong@gmail.com",
+      "address": "quang nam"
+    },
+    {
+      "name": "Thảo Vi Hoàng",
+      "position": "sdf",
+      "education": "fdsf",
+      "division": "ergtre",
+      "dOB": "2021-09-29",
+      "cmnd": "gfdgdf",
+      "salary": "dfgdf",
+      "phone": "0948785547",
+      "email": "hoangthaovitt@gmail.com",
+      "address": "71 dũng sĩ thanh khê, đà nẵng",
+      "id": 2
+    },
+    {
+      "name": "trung thong",
+      "position": "sdf",
+      "education": "fdsf",
+      "division": "ergtre",
+      "dOB": null,
+      "cmnd": "gfdgdf",
+      "salary": "dfgdf",
+      "phone": "0948785547",
+      "email": "hoangthaovitt@gmail.com",
+      "address": "239/2 dũng sĩ thanh khê",
+      "id": 3
+    },
+    {
+      "name": "nh",
+      "position": "hgfhf",
+      "education": "á",
+      "division": "a",
+      "dOB": "1111-11-11",
+      "cmnd": "1",
+      "salary": "1",
+      "phone": "1",
+      "email": "1",
+      "address": "1",
+      "id": 4
+    }
+  ]
+}
