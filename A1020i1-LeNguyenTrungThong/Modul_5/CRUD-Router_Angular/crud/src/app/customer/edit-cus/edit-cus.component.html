@@ -1,0 +1,7 @@
+<h3>Edit Customer</h3>
+<form [formGroup]="editCustomer" (ngSubmit)="EditForm()">
+  <span>Name</span><input type="text" placeholder="name" formControlName="name">
+  <span>Birthday</span><input type="date" placeholder="birthday" formControlName="birthday">
+  <span>Address</span><input type="text" placeholder="address" formControlName="address">
+  <button class="btn-warning">Submit</button>
+</form>

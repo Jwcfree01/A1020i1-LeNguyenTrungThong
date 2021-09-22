@@ -19,16 +19,16 @@ export class EmployeeService {
     return this.httpClient.post<IEmployee>(this.API_URL, employee);
   }
 
-  findByIdEmployee(id:number): Observable<IEmployee>{
-    return this.httpClient.get<IEmployee>(this.API_URL+'/'+id);
+  findByIdEmployee(id:number): Observable<any>{
+    return this.httpClient.get(this.API_URL+'/'+id);
   }
 
   deleteEmployee(id: number){
     return this.httpClient.delete<IEmployee>(this.API_URL+"/"+id);
   }
 
-  updateEmployee(id: any, employee: IEmployee): Observable<IEmployee> {
-    return this.httpClient.put<IEmployee>(this.API_URL + "/" + id, employee);
+  updateEmployee(empId: number, employee: IEmployee): Observable<IEmployee> {
+    return this.httpClient.put<IEmployee>(this.API_URL + "/" + empId, employee);
   }
 
 

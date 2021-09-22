@@ -44,14 +44,15 @@ export class CreateEmployeeComponent implements OnInit {
     console.log(this.createEmployee.value);
     this.employeeService.createEmployee(this.createEmployee.value).subscribe()
     alert("add employee " + this.name?.value + " success")
-    let ref = document.getElementById("cancel");
-    ref?.click();
-    this.employeeService.getAllEmployee();
+    // let ref = document.getElementById("cancel");
+    // ref?.click();
+    // this.router.navigateByUrl("employee");
+    window.location.href="../list-employee/list-employee.component.html"
   }
 
-  employee(){
-    return this.createEmployee.controls;
-  }
+  // employee(){
+  //   return this.createEmployee.controls;
+  // }
 
 }
 

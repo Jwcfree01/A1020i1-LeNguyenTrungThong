@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col">
+    <select aria-label="Default select example" (ngModelChange)="searchSelect ()" [(ngModel)]="maSo1">
+      <option selected>Mã Sổ Tiết Kiệm</option>
+      <option *ngFor="let maSo of so1" value="{{maSo.id}}">{{maSo.id}}</option>
+    </select>
+  </div>
+  <div class="col">
+    <input type="search" placeholder="Search" [(ngModel)]="searchName" (ngModelChange)="search()">
+    <button class="btn btn-success">Search</button>
+  </div>
+</div>
+
+
+<table class="table table-hover mt-4">
+  <thead>
+  <tr>
+    <th scope="col">Mã Số Sổ</th>
+    <th scope="col">Mã KH</th>
+    <th scope="col">Tên KH</th>
+    <th scope="col">Ngày Mở</th>
+    <th scope="col">Thời Hian Bắt Đầu</th>
+    <th scope="col">Kì Hạn</th>
+    <th scope="col">Số Tiền</th>
+    <th scope="col">Lãi Suất</th>
+    <th scope="col">Ưu Đãi</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let so of so1 | paginate: {itemsPerPage:2, currentPage:p};">
+    <td>{{so.id}}</td>
+    <td>{{so.customer.idCus}}</td>
+    <td>{{so.customer.name}}</td>
+    <td>{{so.ngayMoSo}}</td>
+    <td>{{so.thoiGianBatDau}}</td>
+    <td>{{so.kyHan}}</td>
+    <td>{{so.soTienGoi}}</td>
+    <td>{{so.laiSuat}}</td>
+    <td>{{so.uuDai}}</td>
+    <td>
+      <button class="btn btn-warning" [routerLink]="['/edit/'+so.id]">Edit</button> &nbsp;
+      <button class="btn btn-danger" (click)="delete(so.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</table>

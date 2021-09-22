@@ -1,0 +1,18 @@
+<h3>Create Customer</h3>
+<form [formGroup]="createCus">
+  <span>Name</span><input type="text" placeholder="name" formControlName="name">
+  <span>Birthday</span><input type="date" placeholder="birthday" formControlName="birthday">
+  <div
+    *ngIf="createCus.errors?.error">
+    birthday is not valid
+  </div>
+  <span>Address</span><input type="text" placeholder="address" formControlName="address">
+  <div
+    *ngIf="createCus.controls.address?.invalid && (createCus.controls.address?.dirty
+          ||createCus.controls.address?.touched)">
+    address is not valid
+  </div>
+  <button class="btn-warning" type="submit" [disabled]="!createCus.valid" (click)="CreateForm()" data-bs-dismiss="modal">Submit</button>
+</form>
+
+

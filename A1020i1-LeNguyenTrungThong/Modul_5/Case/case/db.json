@@ -1,17 +1,17 @@
 {
   "employees": [
     {
-      "name": "dd",
+      "name": "Thảo Vi Hoàng",
       "position": "dsfds",
       "education": "fdsf",
-      "division": "ergtre",
-      "dOB": null,
-      "cmnd": "gfdgdf",
-      "salary": "dfgdf",
+      "division": null,
+      "dOB": "2021-09-15",
+      "cmnd": null,
+      "salary": null,
       "phone": "0948785547",
       "email": "hoangthaovitt@gmail.com",
       "address": "71 dũng sĩ thanh khê, đà nẵng",
-      "id": 2
+      "id": 4
     }
   ]
 }

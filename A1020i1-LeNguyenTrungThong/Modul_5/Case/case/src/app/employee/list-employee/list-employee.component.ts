@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {IEmployee} from "../../IEmployee";
 import {EmployeeService} from "../../employeeService";
+import {DialogMaterialComponent} from "../../dialog-material/dialog-material.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-list-employee',
@@ -11,7 +13,7 @@ export class ListEmployeeComponent implements OnInit {
 
   employee1: IEmployee[] = [];
 
-  constructor(private employeeService: EmployeeService) {
+  constructor(private employeeService: EmployeeService, public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -28,11 +30,19 @@ export class ListEmployeeComponent implements OnInit {
     );
   }
 
+  openDialog(empId: number): void {
+    this.employeeService.findByIdEmployee(empId).subscribe(data =>{
+      const dialogRef = this.dialog.open(DialogMaterialComponent, {
+        width: '500px',
+        data: {data1: data}
+      });
 
-  deleteEmployee(id: number) {
-    alert(id);
-    this.employeeService.deleteEmployee(id).subscribe();
-    this.employeeService.getAllEmployee();
+      dialogRef.afterClosed().subscribe(() => {
+        console.log('The dialog was closed');
+        this.ngOnInit()
+      });
+    })
+
   }
 
   details(id: number) {

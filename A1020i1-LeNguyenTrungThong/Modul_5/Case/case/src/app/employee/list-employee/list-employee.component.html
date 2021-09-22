@@ -1,7 +1,14 @@
-<div>
-  <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" routerLinkl="/create">Create Employee
-  </button>
+<div class="row">
+  <div class="col-4">
+    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">Create Employee
+    </button>
+  </div>
+  <div class="col-8">
+    <input type="search" placeholder="search">
+    <button>Search</button>
+  </div>
 </div>
+
 <table class="table table-hover">
   <thead>
   <tr>
@@ -20,7 +27,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let employee of employee1">
+  <tr *ngFor="let employee of employee1 ">
     <td>{{employee.id}}</td>
     <td>{{employee.name}}</td>
     <td>{{employee.position}}</td>
@@ -33,14 +40,12 @@
     <td>{{employee.email}}</td>
     <td>{{employee.address}}</td>
     <td>
-      <a href=""><i (click)="details(employee.id)" class="bi bi-pencil-square"></i></a> &nbsp;
-      <a href=""><i (click)="deleteEmployee(employee.id)" class="bi bi-trash-fill"></i></a>
+      <button><i [routerLink]="['/employee-edit/'+employee.id]" class="bi bi-pencil-square"></i></button> &nbsp;
+      <button><i (click)="openDialog(employee.id)" class="bi bi-trash-fill"></i></button>
     </td>
   </tr>
   </tbody>
 </table>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

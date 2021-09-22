@@ -1,0 +1,7 @@
+<h4>Xác nhận xóa nhân viên</h4>
+<hr>
+<p>bạn chắc chắn muốn xóa khách hàng <span class="text-danger font-weight-bold">{{nameCus}}</span> này không? <br>Lưu ý: thao tác không thể hoàn tác!!</p>
+<div class="row d-flex justify-content-end">
+  <button mat-button mat-dialog-close class="btn btn-warning mr-3" style="width: 80px">Cancel</button>
+  <button class="btn btn-danger mr-3" style="width: 80px" (click)="deleteEmployee()">Delete</button>
+</div>

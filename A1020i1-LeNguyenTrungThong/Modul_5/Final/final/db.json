@@ -1,0 +1,53 @@
+{
+  "sotietkiem": [
+    {
+      "id": 3,
+      "ngayMoSo": "2020/10/10",
+      "thoiGianBatDau": "2020/10/10",
+      "kyHan": 6,
+      "soTienGoi": "2",
+      "laiSuat": 10,
+      "uuDai": "ao mua",
+      "customer": {
+        "idCus": 1,
+        "name": "thong"
+      }
+    },
+    {
+      "id": 3,
+      "ngayMoSo": "2020/10/10",
+      "thoiGianBatDau": "2020/10/10",
+      "kyHan": 6,
+      "soTienGoi": "2",
+      "laiSuat": 10,
+      "uuDai": "ao mua",
+      "customer": {
+        "idCus": 1,
+        "name": "abc"
+      }
+    },
+    {
+      "id": 3,
+      "ngayMoSo": "2020/10/10",
+      "thoiGianBatDau": "2020/10/10",
+      "kyHan": 6,
+      "soTienGoi": "2",
+      "laiSuat": 10,
+      "uuDai": "ao mua",
+      "customer": {
+        "idCus": 1,
+        "name": "thong"
+      }
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "thong"
+    },
+    {
+      "id": 2,
+      "name": "vi"
+    }
+  ]
+}

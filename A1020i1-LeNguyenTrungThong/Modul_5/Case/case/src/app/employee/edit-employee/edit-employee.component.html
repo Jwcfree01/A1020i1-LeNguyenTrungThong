@@ -1,0 +1,98 @@
+<div class="row">
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <form [formGroup]="EditEmployee" (ngSubmit)="onSubmit()" class=""
+          action="" method="post">
+      <h1 class="text-center mb-3 text-primary">EDIT INFORMATION EMPLOYEE</h1>
+      <div class="row">
+        <div class="form-group ml-3">
+          <label>Name</label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <div
+          *ngIf="!EditEmployee.controls.name?.valid && (EditEmployee.controls.name?.dirty
+          ||EditEmployee.controls.name?.touched)">
+          Name is not valid
+        </div>
+        <div class="form-group col">
+          <label>Position</label>
+          <input type="text" class="form-control" id="position" formControlName="position">
+        </div>
+        <div
+          *ngIf="!EditEmployee.controls.position?.valid && (EditEmployee.controls.position?.dirty
+          ||EditEmployee.controls.position?.touched)">
+          Position is not valid
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="form-group col">
+          <label>Education</label>
+          <input type="text" class="form-control" id="education" formControlName="education">
+        </div>
+        <div
+          *ngIf="!EditEmployee.controls.education?.valid && (EditEmployee.controls.education?.dirty
+          ||EditEmployee.controls.education?.touched)">
+          Education is not valid
+        </div>
+        <div class="form-group col">
+          <label>Division</label>
+          <input type="text" class="form-control" id="division" formControlName="division">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-group">
+            <label>Date Of Birth</label>
+            <input type="date" class="form-control" id="dOB" formControlName="dOB">
+            <!--            <mat-form-field>-->
+            <!--              <input matInput [matDatepicker]="picker" placeholder="Choose a date">-->
+            <!--              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+            <!--              <mat-datepicker #picker></mat-datepicker>-->
+            <!--            </mat-form-field>-->
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>CMND</label>
+            <input type="text" class="form-control" id="cmnd" formControlName="cmnd">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-group">
+            <label>Salary</label>
+            <input type="text" class="form-control" id="salary" formControlName="salary">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" class="form-control" id="phone" formControlName="phone">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" id="email" formControlName="email">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control" id="address" formControlName="address">
+          </div>
+        </div>
+      </div>
+      <span>
+                <button type="submit"
+                        class="btn btn-primary mt-3 float-end">Edit Employee</button>
+                <button id="cancel" type="submit" class="btn btn-danger mt-3 float-end" data-bs-dismiss="modal">Cancel</button>
+            </span>
+    </form>
+  </div>
+</div>
+
+
